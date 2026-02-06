@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fiel Importados</title>
+
   <style>
     body {
       margin: 0;
@@ -11,63 +12,82 @@
       background: #000;
       color: #fff;
     }
+
     header {
       background: #0a7a3b;
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
       font-weight: bold;
     }
+
     .banner {
-      padding: 30px;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+      url('https://images.unsplash.com/photo-1505842465776-3d90f616310d');
+      background-size: cover;
+      background-position: center;
       text-align: center;
-      background: #111;
+      padding: 80px 20px;
     }
+
     .banner p {
-      color: #ccc;
+      color: #ddd;
     }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0a7a3b;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     .produtos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 30px;
     }
+
     .card {
       background: #111;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,.6);
     }
+
     .card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
-    .card .info {
+
+    .info {
       padding: 15px;
     }
-    .card h3 {
-      margin: 0 0 10px;
-    }
+
     .price {
       color: #0a7a3b;
       font-size: 18px;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
-    .btn {
-      display: block;
-      text-align: center;
-      background: #0a7a3b;
-      color: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
     .btn.whats {
       background: #25d366;
-      margin-top: 8px;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
     }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -77,25 +97,31 @@
     }
   </style>
 </head>
+
 <body>
 
-<header>⚽ Fiel Importados</header>
+<header>
+  <strong>⚽ Fiel Importados</strong>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="https://wa.me/556692607691">Contato</a>
+  </nav>
+</header>
 
 <section class="banner">
-  <h2>Vista sua paixão pelo futebol</h2>
-  <p>Camisas de time com entrega para todo o Brasil 🇧🇷</p>
+  <h2>Sua paixão pelo futebol, em cada camisa</h2>
+  <p>Camisas nacionais e internacionais com qualidade premium</p>
+  <a href="#produtos" class="btn">Ver produtos</a>
 </section>
 
-<section class="produtos">
+<section class="produtos" id="produtos">
   <div class="card">
     <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
     <div class="info">
       <h3>Camisa Seleção Brasileira</h3>
       <div class="price">R$ 199,90</div>
-      <a class="btn" href="#">Comprar agora</a>
-      <a class="btn whats" href="https://wa.me/556692607691" target="_blank">
-        Comprar no WhatsApp
-      </a>
+      <a class="btn whats" href="https://wa.me/556692607691">Comprar no WhatsApp</a>
     </div>
   </div>
 
@@ -104,10 +130,7 @@
     <div class="info">
       <h3>Camisa Barcelona</h3>
       <div class="price">R$ 249,90</div>
-      <a class="btn" href="#">Comprar agora</a>
-      <a class="btn whats" href="https://wa.me/556692607691" target="_blank">
-        Comprar no WhatsApp
-      </a>
+      <a class="btn whats" href="https://wa.me/556692607691">Comprar no WhatsApp</a>
     </div>
   </div>
 </section>
