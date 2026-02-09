@@ -1,143 +1,253 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiel Importados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiel Importados | Premium Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #000; color: #fff; overflow-x: hidden; }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #000;
-      color: #fff;
-    }
+        header { background: #000; padding: 20px 5%; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 2000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; }
+        .logo { font-weight: 900; font-size: 1.6rem; color: #fff; text-decoration: none; text-transform: uppercase; }
 
-    header {
-      background: #0a7a3b;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .banner-principal { 
+            width: 100%; height: 300px; 
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000'); 
+            background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+        }
+        .banner-principal h1 { font-size: 2.5rem; font-weight: 900; color: #fff; text-transform: uppercase; }
+        .banner-principal p { color: #ff4757; font-weight: 800; font-size: 0.9rem; margin-top: 5px; }
 
-    header nav a {
-      color: #fff;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        /* ROLETA APENAS COM LOGOS */
+        .secao-filtros { background: #fff; padding: 10px 0; position: relative; border-bottom: 4px solid #ff4757; display: flex; align-items: center; }
+        
+        .btn-roleta {
+            position: absolute; background: #000; color: #fff;
+            width: 35px; height: 35px; border-radius: 50%; cursor: pointer; z-index: 10;
+            display: flex; align-items: center; justify-content: center; border: none;
+        }
+        .btn-prev { left: 10px; }
+        .btn-next { right: 10px; }
 
-    .banner {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url('https://images.unsplash.com/photo-1505842465776-3d90f616310d');
-      background-size: cover;
-      background-position: center;
-      padding: 80px 20px;
-      text-align: center;
-    }
+        .roleta-wrapper { overflow: hidden; width: 90%; margin: 0 auto; }
+        .roleta-container { display: flex; gap: 40px; transition: transform 0.4s ease-out; padding: 10px 0; align-items: center; }
+        
+        .escudo-item { min-width: 60px; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; transition: 0.3s; }
+        .escudo-item img { width: 50px; height: 50px; object-fit: contain; }
+        .escudo-item p { color: #000; font-size: 11px; font-weight: 900; text-transform: uppercase; margin-top: 5px; }
+        .escudo-item.ativo { transform: scale(1.2); border-bottom: 3px solid #ff4757; }
 
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
+        /* VITRINE */
+        .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1250px; margin: 40px auto; padding: 0 5%; }
+        .card { background: #111; padding: 15px; border-radius: 20px; border: 1px solid #222; position: relative; }
+        .card.hidden { display: none; }
+        
+        .selo { position: absolute; top: 20px; left: 20px; background: #ff4757; color: #fff; padding: 5px 12px; border-radius: 5px; font-size: 10px; font-weight: 900; z-index: 5; }
 
-    .card {
-      background: #111;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+        .moldura { width: 100%; height: 320px; border-radius: 15px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .trilho { display: flex; width: 100%; height: 100%; transition: 0.5s; }
+        .trilho img { min-width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+        
+        .seta-img { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.1); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 12px; }
+        .seta-esq { left: 5px; }
+        .seta-dir { right: 5px; }
 
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
+        .info { padding: 15px 0; text-align: center; }
+        .preco { font-size: 1.4rem; font-weight: 900; color: #fff; margin: 5px 0; }
+        .btn-comprar { display: block; width: 100%; background: #fff; color: #000; padding: 14px; border-radius: 12px; font-weight: 900; border: none; cursor: pointer; }
 
-    .info {
-      padding: 15px;
-    }
+        /* MODAL */
+        .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+        .modal-content { background: #fff; color: #000; margin: 5% auto; padding: 25px; width: 90%; max-width: 450px; border-radius: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; font-size: 12px; }
+        .form-group select, .form-group input { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; font-weight: 700; }
 
-    .price {
-      color: #0a7a3b;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      display: block;
-      text-align: center;
-      background: #0a7a3b;
-      color: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn.whats {
-      background: #25d366;
-      margin-top: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+        /* NOVOS ESTILOS PAGAMENTO */
+        .footer-pagamento { background: #111; padding: 40px 5%; text-align: center; border-top: 1px solid #222; margin-top: 50px; }
+        .footer-pagamento h4 { font-size: 12px; font-weight: 900; color: #888; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
+        .icones-pagamento { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; opacity: 0.8; }
+        .icones-pagamento img { height: 25px; filter: grayscale(100%) brightness(200%); }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <strong>⚽ Fiel Importados</strong>
-  <nav>
-    <a href="#">Início</a>
-    <a href="#produtos">Produtos</a>
-    <a href="https://wa.me/556692607691" target="_blank">Contato</a>
-  </nav>
-</header>
+    <header>
+        <div class="nav-container"><a href="#" class="logo">FIEL IMPORTADOS</a><i class="fas fa-shopping-cart"></i></div>
+    </header>
 
-<section class="banner">
-  <h2>Sua paixão pelo futebol, em cada camisa</h2>
-  <p>Camisas nacionais e internacionais com qualidade premium</p>
-  <a class="btn" style="max-width:200px;margin:20px auto" href="#produtos">
-    Ver produtos
-  </a>
-</section>
-
-<section class="produtos" id="produtos">
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
-    <div class="info">
-      <h3>Camisa Seleção Brasileira</h3>
-      <div class="price">R$ 199,90</div>
-      <a class="btn whats" href="https://wa.me/556692607691" target="_blank">
-        Comprar no WhatsApp
-      </a>
+    <div class="banner-principal">
+        <h1>TEMPORADA 2025/26</h1>
+        <p>QUALIDADE PREMIUM 1:1</p>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
-    <div class="info">
-      <h3>Camisa Barcelona</h3>
-      <div class="price">R$ 249,90</div>
-      <a class="btn whats" href="https://wa.me/556692607691" target="_blank">
-        Comprar no WhatsApp
-      </a>
+    <div class="secao-filtros">
+        <button class="btn-roleta btn-prev" onclick="scrollRoleta(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="roleta-wrapper">
+            <div class="roleta-container" id="roleta">
+                <div class="escudo-item ativo" onclick="filtrar('todos', this)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/33/33736.png">
+                    <p>TODOS</p>
+                </div>
+                <div class="escudo-item" onclick="filtrar('flamengo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6040068114-b9737bb2a583c275f38ce1e75764efce1761683247-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('corinthians', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761767726223-1266909200-423ac9fbe74060122ec071758e87db201761768095-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('saopaulo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6463047056-ba7c02c19011d25dfa1bc61d4d13b06a1761683247-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('palmeiras', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682991550-7882511270-b17288606169aca4920cd0a11171890a1761683359-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('vasco', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1260154421-0baf0a950494c94546359d8367df8c131763066292-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('santos', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065698643-589024690-76e8034ed9e94f52e429e8a5764ff0231763066101-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('botafogo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-4479546133-af2647045fefa40ef226d8f270af7f381763066292-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('fluminense', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-7253022095-603f15c5cae0a945920779fb327c7a0d1763066292-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('internacional', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1627892328-ed33217c65a531f43293ec237a9066ea1763066292-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('cruzeiro', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-914227699-28561a5118d1f9f0d64d8ff1efefd90b1763066293-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('atletico', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-411894232-ccec1c618636914e76696b1cff3da2e71763066293-1400-1400.webp"></div>
+                <div class="escudo-item" onclick="filtrar('gremio', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889536-3459085592-a4a8763d492b78234226db24461690391763066293-1400-1400.webp"></div>
+            </div>
+        </div>
+        <button class="btn-roleta btn-next" onclick="scrollRoleta(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
-  </div>
-</section>
 
-<footer>
-  © 2026 Fiel Importados · Entregas em todo o Brasil 🇧🇷
-</footer>
+    <section class="vitrine">
+        <div class="card" data-time="corinthians">
+            <span class="selo">NOVIDADE</span>
+            <div class="moldura">
+                <button class="seta-img seta-esq" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="trilho">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-corinthians-timao-roxa-roxo-lilas-nike-de-treino-treinamento-pre-jogo-aquecimento-gola-escura-redonda-2025-2026-25-26-torcedor-bordado-1-8e0cd98aa28b86333917495920396285-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-corinthians-timao-roxa-roxo-lilas-nike-de-treino-treinamento-pre-jogo-aquecimento-gola-escura-redonda-2025-2026-25-26-torcedor-bordado-4-b926f6a513116a6e5c17495920394037-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-corinthians-timao-roxa-roxo-lilas-nike-de-treino-treinamento-pre-jogo-aquecimento-gola-escura-redonda-2025-2026-25-26-torcedor-bordado-3-749c8bbcdb177e5b9717495920396494-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-corinthians-timao-roxa-roxo-lilas-nike-de-treino-treinamento-pre-jogo-aquecimento-gola-escura-redonda-2025-2026-25-26-torcedor-bordado-2-8acafe8da32cfb563617495920396586-1024-1024.webp">
+                </div>
+               <button class="seta-img seta-dir" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="info">
+                <h3>Corinthians Roxa III 24/25</h3>
+                <p class="preco">R$ 179,90</p>
+                <button class="btn-comprar" onclick="abrirModal('Corinthians Roxa III')">COMPRAR AGORA</button>
+            </div>
+        </div>
 
+        <div class="card" data-time="flamengo">
+            <div class="moldura">
+                <button class="seta-img seta-esq" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="trilho">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-flamengo-treino-atleta-azul-clara-2025-adidas-masculina-oficial-4-ea51fe65fbaf1beb3e17520159356629-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-flamengo-treino-atleta-azul-clara-2025-adidas-masculina-oficial-1-8cac94b13d8d93abc817520159350237-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-flamengo-treino-atleta-azul-clara-2025-adidas-masculina-oficial-6-1c7b83cb415c59ca7f17520159353583-1024-1024.webp">
+                    <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-flamengo-treino-atleta-azul-clara-2025-adidas-masculina-oficial-5-e6ff14de88bd33a45917520159354379-1024-1024.webp">
+                </div>
+                <button class="seta-img seta-dir" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="info">
+                <h3>Flamengo Polo Azul 2025</h3>
+                <p class="preco">R$ 169,90</p>
+                <button class="btn-comprar" onclick="abrirModal('Flamengo Polo Azul')">COMPRAR AGORA</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-pagamento">
+        <h4>Formas de Pagamento ACEITAS</h4>
+        <div class="icones-pagamento">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo%E2%80%94Pix.svg" alt="Pix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            <img src="https://cdn-icons-png.flaticon.com/512/179/179376.png" alt="Boleto" style="height: 20px;">
+        </div>
+        <p style="margin-top: 15px; font-size: 10px; color: #444; font-weight: 700;">PEDIDOS FINALIZADOS VIA WHATSAPP COM SEGURANÇA</p>
+    </footer>
+
+    <div id="janelaCompra" class="modal">
+        <div class="modal-content">
+            <h2 id="modalNome" style="margin-bottom:20px; font-weight:900;">Finalizar Pedido</h2>
+            <div class="form-group">
+                <label>Tamanho:</label>
+                <select id="tam">
+                    <option>P</option><option>M</option><option>G</option><option>GG</option><option>XG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Personalização (Nome e Número):</label>
+                <input type="text" id="perso" placeholder="Ex: NEYMAR JR - 10">
+            </div>
+            <div class="form-group">
+                <label>Forma de Pagamento:</label>
+                <select id="pagamento">
+                    <option>Pix (Envio Imediato)</option>
+                    <option>Cartão de Crédito</option>
+                    <option>Boleto Bancário</option>
+                </select>
+            </div>
+            <button onclick="enviarWpp()" style="background:#25d366; color:white; border:none; padding:18px; width:100%; border-radius:12px; font-weight:900; cursor:pointer;">
+                <i class="fab fa-whatsapp"></i> ENVIAR PEDIDO
+            </button>
+            <p fecharModal()" style="text-align:center; margin-top:20px; cursor:pointer; color:red; font-weight:900;" onclick="fecharModal()">CANCELAR</p>
+        </div>
+    </div>
+
+    <script>
+        let scrollAmount = 0;
+        const roleta = document.getElementById('roleta');
+        let produtoSelecionado = "";
+
+        function scrollRoleta(direction) {
+            const step = 200; 
+            const maxScroll = roleta.scrollWidth - roleta.parentElement.offsetWidth;
+            scrollAmount += direction * step;
+            if (scrollAmount < 0) scrollAmount = 0;
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            roleta.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        function mudarFoto(btn, dir) {
+            const trilho = btn.parentElement.querySelector('.trilho');
+            const total = trilho.querySelectorAll('img').length;
+            let index = parseInt(trilho.dataset.index || 0);
+            index += dir;
+            if (index >= total) index = 0;
+            if (index < 0) index = total - 1;
+            trilho.style.transform = `translateX(-${index * 100}%)`;
+            trilho.dataset.index = index;
+        }
+
+        function filtrar(time, el) {
+            document.querySelectorAll('.escudo-item').forEach(i => i.classList.remove('ativo'));
+            el.classList.add('ativo');
+            document.querySelectorAll('.card').forEach(c => {
+                if(time === 'todos' || c.getAttribute('data-time') === time) c.classList.remove('hidden');
+                else c.classList.add('hidden');
+            });
+        }
+
+        function abrirModal(nome) {
+            produtoSelecionado = nome;
+            document.getElementById('modalNome').innerText = nome;
+            document.getElementById('janelaCompra').style.display = "block";
+        }
+
+        function fecharModal() {
+            document.getElementById('janelaCompra').style.display = "none";
+        }
+
+        function enviarWpp() {
+            const tam = document.getElementById('tam').value;
+            const perso = document.getElementById('perso').value || "Sem personalização";
+            const pgto = document.getElementById('pagamento').value; // Pega o pagamento escolhido
+            
+            const msg = `Olá! Quero encomendar:\n\n` +
+                        `👕 *Produto:* ${produtoSelecionado}\n` +
+                        `📏 *Tamanho:* ${tam}\n` +
+                        `✍️ *Personalização:* ${perso}\n` +
+                        `💳 *Pagamento:* ${pgto}`;
+                        
+            window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
 </body>
 </html>
