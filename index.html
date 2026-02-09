@@ -12,43 +12,22 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
 
-        /* BUSCA */
-        header { 
-            background: rgba(0,0,0,0.95); 
-            padding: 15px 5%; 
-            border-bottom: 1px solid #222; 
-            position: sticky; 
-            top: 0; 
-            z-index: 2001; 
-            backdrop-filter: blur(10px); 
-        }
-
-        .search-container { 
-            background: #000; 
-            padding: 15px 5%; 
-            display: flex; 
-            justify-content: center; 
-            border-bottom: 1px solid #222; 
-            position: sticky; 
-            top: 60px; 
-            z-index: 2000; 
-        }
-        .search-box { position: relative; width: 100%; max-width: 600px; }
-        .search-box i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #666; }
-        .search-box input { width: 100%; padding: 12px 15px 12px 45px; background: #111; border: 1px solid #333; border-radius: 50px; color: #fff; font-size: 14px; outline: none; transition: 0.3s; }
-        .search-box input:focus { border-color: var(--primary); background: #1a1a1a; box-shadow: 0 0 10px rgba(255, 71, 87, 0.2); }
-
-        /* BENEFICIOS */
-        .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 30px 5%; background: #fff; color: #333; text-align: center; }
-        .beneficio-item i { font-size: 1.8rem; color: #333; margin-bottom: 8px; }
-        .beneficio-item h4 { font-weight: 900; text-transform: uppercase; font-size: 13px; }
-        .beneficio-item p { font-size: 11px; color: #777; }
-
+        header { background: rgba(0,0,0,0.95); padding: 15px 5%; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 2001; backdrop-filter: blur(10px); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; }
         .logo { font-weight: 900; font-size: 1.4rem; color: #fff !important; text-decoration: none; text-transform: uppercase; }
         .logo span { color: var(--primary); }
         .cart-trigger { cursor: pointer; position: relative; color: #fff; display: flex; align-items: center; }
         #cart-count { position: absolute; top: -8px; right: -10px; background: var(--primary); color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 11px; font-weight: 900; }
+
+        .search-container { background: #000; padding: 15px 5%; display: flex; justify-content: center; border-bottom: 1px solid #222; position: sticky; top: 60px; z-index: 2000; }
+        .search-box { position: relative; width: 100%; max-width: 600px; }
+        .search-box i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #666; }
+        .search-box input { width: 100%; padding: 12px 15px 12px 45px; background: #111; border: 1px solid #333; border-radius: 50px; color: #fff; font-size: 14px; outline: none; transition: 0.3s; }
+
+        .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 30px 5%; background: #fff; color: #333; text-align: center; }
+        .beneficio-item i { font-size: 1.8rem; color: #333; margin-bottom: 8px; }
+        .beneficio-item h4 { font-weight: 900; text-transform: uppercase; font-size: 13px; }
+        .beneficio-item p { font-size: 11px; color: #777; }
 
         .banner-principal { width: 100%; height: 350px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
         .banner-principal h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
@@ -109,26 +88,10 @@
     </div>
 
     <section class="beneficios">
-        <div class="beneficio-item">
-            <i class="fas fa-certificate"></i>
-            <h4>Qualidade Premium</h4>
-            <p>Padrão de Jogador 1:1</p>
-        </div>
-        <div class="beneficio-item">
-            <i class="fas fa-credit-card"></i>
-            <h4>Tudo em até 12x</h4>
-            <p>3x sem juros no cartão</p>
-        </div>
-        <div class="beneficio-item">
-            <i class="fas fa-shield-alt"></i>
-            <h4>Site seguro</h4>
-            <p>Sua compra protegida</p>
-        </div>
-        <div class="beneficio-item">
-            <i class="fab fa-whatsapp"></i>
-            <h4>Dúvidas?</h4>
-            <p>Suporte 24h via WhatsApp</p>
-        </div>
+        <div class="beneficio-item"><i class="fas fa-certificate"></i><h4>Qualidade Premium</h4><p>Padrão de Jogador 1:1</p></div>
+        <div class="beneficio-item"><i class="fas fa-credit-card"></i><h4>Tudo em até 12x</h4><p>3x sem juros no cartão</p></div>
+        <div class="beneficio-item"><i class="fas fa-shield-alt"></i><h4>Site seguro</h4><p>Sua compra protegida</p></div>
+        <div class="beneficio-item"><i class="fab fa-whatsapp"></i><h4>Dúvidas?</h4><p>Suporte 24h via WhatsApp</p></div>
     </section>
 
     <div class="banner-principal">
@@ -194,28 +157,26 @@
                 <label style="font-size: 10px; font-weight: 900; color: #666;">ENTREGA:</label>
                 <input type="text" id="cep-cliente" placeholder="CEP" maxlength="8" onblur="buscarEndereco()" class="input-checkout">
                 <div style="display: flex; gap: 5px; margin-bottom: 5px;">
-                    <select id="estado-cliente" onchange="calcularFreteManual()" class="input-checkout" style="width: 40%;">
-                        <option value="">UF</option><option value="SP">SP</option><option value="RJ">RJ</option><option value="MG">MG</option><option value="PR">PR</option><option value="SC">SC</option><option value="RS">RS</option><option value="MT">MT</option>
-                    </select>
-                    <input type="text" id="cidade-cliente" placeholder="Cidade" class="input-checkout" style="width: 60%;" onblur="verificarPatoBranco()">
+                    <input type="text" id="estado-cliente" placeholder="UF" class="input-checkout" style="width: 30%;">
+                    <input type="text" id="cidade-cliente" placeholder="Cidade" class="input-checkout" style="width: 70%;" onblur="verificarPatoBranco()">
                 </div>
-                <input type="text" id="rua-cliente" placeholder="Endereço Completo" class="input-checkout">
+                <input type="text" id="rua-cliente" placeholder="Rua, Número e Bairro" class="input-checkout">
             </div>
             <label style="font-size: 10px; font-weight: 900; color: #666;">PAGAMENTO:</label>
             <select id="forma-pagamento" onchange="atualizarCarrinho()" class="input-checkout">
-                <option value="pix">Pix (10% de desconto)</option>
-                <option value="1x">Cartão 1x sem juros</option>
-                <option value="2x">Cartão 2x sem juros</option>
-                <option value="3x">Cartão 3x sem juros</option>
-                <option value="4x">Cartão 4x (7,91% juros)</option>
-                <option value="5x">Cartão 5x (8,8% juros)</option>
-                <option value="6x">Cartão 6x (9,67% juros)</option>
-                <option value="7x">Cartão 7x (12,59% juros)</option>
-                <option value="8x">Cartão 8x (13,42% juros)</option>
-                <option value="9x">Cartão 9x (14,25% juros)</option>
-                <option value="10x">Cartão 10x (15,06% juros)</option>
-                <option value="11x">Cartão 11x (15,87% juros)</option>
-                <option value="12x">Cartão 12x (16,66% juros)</option>
+                <option value="pix">10% de desconto no Pix</option>
+                <option value="1x">1x sem juros</option>
+                <option value="2x">2x sem juros</option>
+                <option value="3x">3x sem juros</option>
+                <option value="4x">4x com juros</option>
+                <option value="5x">5x com juros</option>
+                <option value="6x">6x com juros</option>
+                <option value="7x">7x com juros</option>
+                <option value="8x">8x com juros</option>
+                <option value="9x">9x com juros</option>
+                <option value="10x">10x com juros</option>
+                <option value="11x">11x com juros</option>
+                <option value="12x">12x com juros</option>
             </select>
             <div style="font-size: 12px; color: #aaa;">
                 <div>Produtos: <span id="resumo-produtos">R$ 0,00</span></div>
@@ -234,21 +195,9 @@
         let valorFreteBase = 0;
         const tabelaFretes = { 'SP': 23.0, 'RJ': 26.0, 'MG': 27.0, 'PR': 20.0, 'SC': 30.0, 'RS': 32.0, 'MT': 37.0 };
 
-        // Tabela de taxas conforme solicitado
         const taxasCartao = {
-            "pix": -0.10, // 10% desconto
-            "1x": 0,
-            "2x": 0,
-            "3x": 0,
-            "4x": 0.0791,
-            "5x": 0.088,
-            "6x": 0.0967,
-            "7x": 0.1259,
-            "8x": 0.1342,
-            "9x": 0.1425,
-            "10x": 0.1506,
-            "11x": 0.1587,
-            "12x": 0.1666
+            "pix": -0.10, "1x": 0, "2x": 0, "3x": 0, "4x": 0.0791, "5x": 0.088,
+            "6x": 0.0967, "7x": 0.1259, "8x": 0.1342, "9x": 0.1425, "10x": 0.1506, "11x": 0.1587, "12x": 0.1666
         };
 
         function scrollRoleta(direction) {
@@ -278,18 +227,13 @@
         async function buscarEndereco() {
             const cep = document.getElementById('cep-cliente').value.replace(/\D/g, '');
             if (cep.length !== 8) return;
-            if(parseInt(cep) >= 85500000 && parseInt(cep) <= 85511999) {
-                valorFreteBase = 0;
-                document.getElementById('estado-cliente').value = "PR";
-                document.getElementById('cidade-cliente').value = "Pato Branco";
-                atualizarCarrinho(); return;
-            }
             try {
                 const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
                 const data = await response.json();
                 if (!data.erro) {
                     document.getElementById('estado-cliente').value = data.uf;
                     document.getElementById('cidade-cliente').value = data.localidade;
+                    document.getElementById('rua-cliente').value = (data.logradouro || "") + (data.bairro ? ", " + data.bairro : "");
                     valorFreteBase = data.localidade.toLowerCase().includes("pato branco") ? 0 : (tabelaFretes[data.uf] || 35.0);
                     atualizarCarrinho();
                 }
@@ -299,13 +243,10 @@
         function verificarPatoBranco() {
             const cidade = document.getElementById('cidade-cliente').value.toLowerCase();
             if(cidade.includes("pato branco")) valorFreteBase = 0;
-            else calcularFreteManual();
-            atualizarCarrinho();
-        }
-
-        function calcularFreteManual() {
-            const uf = document.getElementById('estado-cliente').value;
-            valorFreteBase = tabelaFretes[uf] || 35.0;
+            else {
+                const uf = document.getElementById('estado-cliente').value;
+                valorFreteBase = tabelaFretes[uf] || 35.0;
+            }
             atualizarCarrinho();
         }
 
@@ -344,18 +285,15 @@
                 </div>`;
             });
 
-            // Cálculo do Total com taxas/desconto
             let taxa = taxasCartao[forma];
-            let total = 0;
+            let total = (subtotal * (1 + taxa)) + valorFreteBase;
 
             if (forma === 'pix') {
-                total = (subtotal * (1 + taxa)) + valorFreteBase;
-                infoParc.innerText = "Desconto de 10% aplicado!";
+                infoParc.innerText = "Desconto de 10% no Pix";
             } else {
-                total = (subtotal * (1 + taxa)) + valorFreteBase;
-                let numParcelas = parseInt(forma);
-                let valorParcela = total / numParcelas;
-                infoParc.innerText = `${forma} de R$ ${valorParcela.toFixed(2)}`;
+                let numParc = parseInt(forma);
+                let vParc = total / numParc;
+                infoParc.innerText = `${numParc}x de R$ ${vParc.toFixed(2)}`;
             }
 
             document.getElementById('resumo-produtos').innerText = `R$ ${subtotal.toFixed(2)}`;
@@ -368,18 +306,25 @@
 
         function enviarPedidoWpp() {
             if(carrinho.length === 0) return alert("Sacola vazia!");
+            const cep = document.getElementById('cep-cliente').value;
+            const cidade = document.getElementById('cidade-cliente').value;
+            const uf = document.getElementById('estado-cliente').value;
             const rua = document.getElementById('rua-cliente').value;
-            if(!rua) return alert("Preencha o endereço completo!");
-            
-            const formaTxt = document.getElementById('forma-pagamento').options[document.getElementById('forma-pagamento').selectedIndex].text;
-            const infoParc = document.getElementById('info-parcela').innerText;
+            if(!rua || !cidade) return alert("Preencha o endereço completo!");
 
-            let texto = `*PEDIDO FIEL IMPORTADOS*\n\n`;
-            carrinho.forEach(i => texto += `- ${i.nome} (${i.tam}) [${i.perso}]\n`);
-            texto += `\n*PAGAMENTO:* ${formaTxt} (${infoParc})`;
-            texto += `\n*TOTAL:* ${document.getElementById('total-sacola').innerText}`;
-            texto += `\n*ENDEREÇO:* ${rua}`;
-            
+            const numPedido = Math.floor(1000 + Math.random() * 9000);
+            const formaPaga = document.getElementById('info-parcela').innerText;
+            const totalFinal = document.getElementById('total-sacola').innerText;
+
+            let texto = `*PEDIDO FIEL IMPORTADOS* (#${numPedido})\n\n`;
+            carrinho.forEach(i => texto += `• ${i.nome} (${i.tam}) [${i.perso}]\n`);
+            texto += `\n*PAGAMENTO:* ${formaPaga}`;
+            texto += `\n*TOTAL:* ${totalFinal}`;
+            texto += `\n\n*ENDEREÇO DE ENTREGA:*`;
+            texto += `\n📍 ${rua}`;
+            texto += `\n🏙️ ${cidade} - ${uf}`;
+            texto += `\n📮 CEP: ${cep}`;
+
             window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(texto)}`);
         }
     </script>
