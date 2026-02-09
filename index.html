@@ -24,7 +24,6 @@
         .banner-principal h1 { font-size: 2.5rem; font-weight: 900; color: #fff; text-transform: uppercase; }
         .banner-principal p { color: #ff4757; font-weight: 800; font-size: 0.9rem; margin-top: 5px; }
 
-        /* ROLETA APENAS COM LOGOS */
         .secao-filtros { background: #fff; padding: 10px 0; position: relative; border-bottom: 4px solid #ff4757; display: flex; align-items: center; }
         
         .btn-roleta {
@@ -43,7 +42,6 @@
         .escudo-item p { color: #000; font-size: 11px; font-weight: 900; text-transform: uppercase; margin-top: 5px; }
         .escudo-item.ativo { transform: scale(1.2); border-bottom: 3px solid #ff4757; }
 
-        /* VITRINE */
         .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1250px; margin: 40px auto; padding: 0 5%; }
         .card { background: #111; padding: 15px; border-radius: 20px; border: 1px solid #222; position: relative; }
         .card.hidden { display: none; }
@@ -62,14 +60,12 @@
         .preco { font-size: 1.4rem; font-weight: 900; color: #fff; margin: 5px 0; }
         .btn-comprar { display: block; width: 100%; background: #fff; color: #000; padding: 14px; border-radius: 12px; font-weight: 900; border: none; cursor: pointer; }
 
-        /* MODAL */
         .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
         .modal-content { background: #fff; color: #000; margin: 5% auto; padding: 25px; width: 90%; max-width: 450px; border-radius: 20px; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; font-size: 12px; }
         .form-group select, .form-group input { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; font-weight: 700; }
 
-        /* NOVOS ESTILOS PAGAMENTO */
         .footer-pagamento { background: #111; padding: 40px 5%; text-align: center; border-top: 1px solid #222; margin-top: 50px; }
         .footer-pagamento h4 { font-size: 12px; font-weight: 900; color: #888; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
         .icones-pagamento { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; opacity: 0.8; }
@@ -79,7 +75,6 @@
 <body>
 
     <header>
-        <header>
         <div class="nav-container">
             <a href="#" class="logo">FIEL IMPORTADOS</a>
             <div onclick="toggleCarrinho()" style="position: relative; cursor: pointer;">
@@ -88,7 +83,6 @@
             </div>
         </div>
     </header>
-   
 
     <div class="banner-principal">
         <h1>TEMPORADA 2025/26</h1>
@@ -171,7 +165,7 @@
         <p style="margin-top: 15px; font-size: 10px; color: #444; font-weight: 700;">PEDIDOS FINALIZADOS VIA WHATSAPP COM SEGURANÇA</p>
     </footer>
 
- <div id="carrinho-lateral" style="position: fixed; right: -350px; top: 0; width: 320px; height: 100%; background: #fff; color: #000; z-index: 4000; transition: 0.4s; box-shadow: -5px 0 15px rgba(0,0,0,0.5); display: flex; flex-direction: column;">
+    <div id="carrinho-lateral" style="position: fixed; right: -350px; top: 0; width: 320px; height: 100%; background: #fff; color: #000; z-index: 4000; transition: 0.4s; box-shadow: -5px 0 15px rgba(0,0,0,0.5); display: flex; flex-direction: column;">
         <div style="padding: 20px; background: #000; color: #fff; display: flex; justify-content: space-between; align-items: center;">
             <h3 style="margin:0; font-weight: 900;">MINHA SACOLA</h3>
             <span onclick="toggleCarrinho()" style="cursor:pointer; font-size: 25px;">&times;</span>
@@ -189,7 +183,6 @@
     <div id="janelaCompra" class="modal">
         <div class="modal-content">
             <h2 id="modalNome" style="margin-bottom:20px; font-weight:900; text-transform:uppercase;">Camisa</h2>
-            
             <div class="form-group">
                 <label>Escolha o Tamanho:</label>
                 <select id="tam">
@@ -199,16 +192,13 @@
                     <option value="GG">Tamanho GG</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label>Personalização (Nome e Número):</label>
                 <input type="text" id="perso" placeholder="Ex: NEYMAR JR - 10">
             </div>
-
             <button onclick="adicionarASacola()" style="background:#000; color:white; border:none; padding:18px; width:100%; border-radius:12px; font-weight:900; cursor:pointer; text-transform:uppercase;">
                 Adicionar à Sacola
             </button>
-            
             <p style="text-align:center; margin-top:20px; cursor:pointer; color:red; font-weight:900;" onclick="fecharModal()">CANCELAR</p>
         </div>
     </div>
@@ -219,7 +209,6 @@
         let scrollAmount = 0;
         const roleta = document.getElementById('roleta');
 
-        // FUNÇÕES DA VITRINE
         function scrollRoleta(direction) {
             const step = 200; 
             const maxScroll = roleta.scrollWidth - roleta.parentElement.offsetWidth;
@@ -249,7 +238,6 @@
             });
         }
 
-        // LÓGICA DO CARRINHO
         function abrirModal(nome) {
             produtoSelecionado = nome;
             document.getElementById('modalNome').innerText = nome;
@@ -268,14 +256,12 @@
         function adicionarASacola() {
             const tam = document.getElementById('tam').value;
             const perso = document.getElementById('perso').value || "Sem personalização";
-            
             carrinho.push({
                 nome: produtoSelecionado,
                 preco: 179.90,
                 tam: tam,
                 perso: perso
             });
-
             fecharModal();
             atualizarCarrinho();
             toggleCarrinho(); 
@@ -287,7 +273,6 @@
             const contador = document.getElementById('cart-count');
             lista.innerHTML = '';
             let total = 0;
-
             carrinho.forEach((item, i) => {
                 total += item.preco;
                 lista.innerHTML += `
@@ -299,7 +284,6 @@
                         <i class="fas fa-trash" onclick="removerItem(${i})" style="color:red; cursor:pointer;"></i>
                     </div>`;
             });
-
             totalEl.innerText = `R$ ${total.toFixed(2)}`;
             contador.innerText = carrinho.length;
         }
@@ -318,125 +302,6 @@
             const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
             msg += `*TOTAL: R$ ${total.toFixed(2)}*`;
             window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(msg)}`);
-        }
-    </script>
-let carrinho = [];
-
-        function toggleCarrinho() {
-            const sacola = document.getElementById('carrinho-lateral');
-            sacola.style.right = sacola.style.right === '0px' ? '-350px' : '0px';
-        }
-
-        function adicionarASacola() {
-            const tam = document.getElementById('tam').value;
-            const perso = document.getElementById('perso').value || "Sem personalização";
-            
-            // Pega o nome do produto que já está na sua variável 'produtoSelecionado'
-            carrinho.push({
-                nome: produtoSelecionado,
-                preco: 179.90, // Valor padrão das suas camisas
-                tam: tam,
-                perso: perso
-            });
-
-            fecharModal();
-            atualizarCarrinho();
-            toggleCarrinho(); // Abre a sacola para o cliente ver que funcionou
-        }
-
-        function atualizarCarrinho() {
-            const lista = document.getElementById('lista-carrinho');
-            const totalEl = document.getElementById('total-sacola');
-            const contador = document.getElementById('cart-count');
-            lista.innerHTML = '';
-            let total = 0;
-
-            carrinho.forEach((item, i) => {
-                total += item.preco;
-                lista.innerHTML += `
-                    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                            <strong style="font-size: 14px; color: #000;">${item.nome}</strong><br>
-                            <small style="color: #666;">Tam: ${item.tam} | ${item.perso}</small>
-                        </div>
-                        <i class="fas fa-trash" onclick="removerItem(${i})" style="color:red; cursor:pointer;"></i>
-                    </div>`;
-            });
-
-            totalEl.innerText = `R$ ${total.toFixed(2)}`;
-            contador.innerText = carrinho.length;
-        }
-
-        function removerItem(i) {
-            carrinho.splice(i, 1);
-            atualizarCarrinho();
-        }
-
-        function enviarPedidoWpp() {
-            if (carrinho.length === 0) return alert("Sua sacola está vazia!");
-            let msg = "*NOVO PEDIDO - FIEL IMPORTADOS*\n\n";
-            carrinho.forEach(item => {
-                msg += `✅ *${item.nome}*\n📏 Tam: ${item.tam}\n✍️ Perso: ${item.perso}\n\n`;
-            });
-            const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
-            msg += `*TOTAL: R$ ${total.toFixed(2)}*`;
-            window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(msg)}`);
-        }
-        let scrollAmount = 0;
-        const roleta = document.getElementById('roleta');
-        let produtoSelecionado = "";
-
-        function scrollRoleta(direction) {
-            const step = 200; 
-            const maxScroll = roleta.scrollWidth - roleta.parentElement.offsetWidth;
-            scrollAmount += direction * step;
-            if (scrollAmount < 0) scrollAmount = 0;
-            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
-            roleta.style.transform = `translateX(-${scrollAmount}px)`;
-        }
-
-        function mudarFoto(btn, dir) {
-            const trilho = btn.parentElement.querySelector('.trilho');
-            const total = trilho.querySelectorAll('img').length;
-            let index = parseInt(trilho.dataset.index || 0);
-            index += dir;
-            if (index >= total) index = 0;
-            if (index < 0) index = total - 1;
-            trilho.style.transform = `translateX(-${index * 100}%)`;
-            trilho.dataset.index = index;
-        }
-
-        function filtrar(time, el) {
-            document.querySelectorAll('.escudo-item').forEach(i => i.classList.remove('ativo'));
-            el.classList.add('ativo');
-            document.querySelectorAll('.card').forEach(c => {
-                if(time === 'todos' || c.getAttribute('data-time') === time) c.classList.remove('hidden');
-                else c.classList.add('hidden');
-            });
-        }
-
-        function abrirModal(nome) {
-            produtoSelecionado = nome;
-            document.getElementById('modalNome').innerText = nome;
-            document.getElementById('janelaCompra').style.display = "block";
-        }
-
-        function fecharModal() {
-            document.getElementById('janelaCompra').style.display = "none";
-        }
-
-        function enviarWpp() {
-            const tam = document.getElementById('tam').value;
-            const perso = document.getElementById('perso').value || "Sem personalização";
-            const pgto = document.getElementById('pagamento').value; // Pega o pagamento escolhido
-            
-            const msg = `Olá! Quero encomendar:\n\n` +
-                        `👕 *Produto:* ${produtoSelecionado}\n` +
-                        `📏 *Tamanho:* ${tam}\n` +
-                        `✍️ *Personalização:* ${perso}\n` +
-                        `💳 *Pagamento:* ${pgto}`;
-                        
-            window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
 </body>
