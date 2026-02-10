@@ -11,6 +11,30 @@
         :root { --primary: #ff4757; --secondary: #25d366; --bg: #000; --card-bg: #111; --text: #fff; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+<style>
+    :root { --primary: #ff4757; --secondary: #25d366; --bg: #000; --card-bg: #111; --text: #fff; }
+
+    .selo-tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ffcc00; 
+        color: #000;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+        z-index: 10;
+        text-transform: uppercase;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .selo-novidade {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+   
 
         header { background: rgba(0,0,0,0.95); padding: 15px 5%; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 2001; backdrop-filter: blur(10px); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; }
@@ -23,6 +47,8 @@
         .search-box { position: relative; width: 100%; max-width: 600px; }
         .search-box i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #666; }
         .search-box input { width: 100%; padding: 12px 15px 12px 45px; background: #111; border: 1px solid #333; border-radius: 50px; color: #fff; font-size: 14px; outline: none; transition: 0.3s; }
+
+        .promo-topo { background: var(--primary); color: #fff; text-align: center; padding: 8px; font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
 
         .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 30px 5%; background: #fff; color: #333; text-align: center; }
         .beneficio-item i { font-size: 1.8rem; color: #333; margin-bottom: 8px; }
@@ -44,19 +70,39 @@
 
         .vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1250px; margin: 40px auto; padding: 0 5%; }
         .card { background: var(--card-bg); padding: 15px; border-radius: 20px; border: 1px solid #222; }
-        .moldura { width: 100%; height: 320px; border-radius: 15px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.card { 
+    background: var(--card-bg); 
+    padding: 15px; 
+    border-radius: 20px; 
+    border: 1px solid #222; 
+    position: relative; /* ADICIONE ESSA LINHA AQUI */
+}
+        
+        .moldura { width: 100%; height: 320px; border-radius: 15px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
         .moldura img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+        .btn-foto-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.1); border: none; width: 30px; height: 100%; cursor: pointer; transition: 0.3s; color: #000; display: flex; align-items: center; justify-content: center; }
+        .btn-foto-nav:hover { background: rgba(0,0,0,0.2); }
+        .btn-foto-prev { left: 0; }
+        .btn-foto-next { right: 0; }
+
         .info { padding: 15px 0; text-align: center; }
         .preco { font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 5px; }
         .preco-pix-card { color: var(--secondary); font-size: 0.9rem; font-weight: 700; }
         .btn-comprar { display: block; width: 100%; background: #fff; color: #000; padding: 14px; border-radius: 12px; font-weight: 900; border: none; cursor: pointer; margin-top: 15px; }
 
         #carrinho-lateral { position: fixed; right: -400px; top: 0; width: 380px; height: 100%; background: #000; border-left: 1px solid #222; z-index: 6000; transition: 0.4s; display: flex; flex-direction: column; }
-        .sacola-header { padding: 25px; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; }
-        #lista-carrinho { flex: 1; overflow-y: auto; padding: 20px; }
-        .resumo-checkout { padding: 25px; background: #111; border-top: 1px solid #222; }
+        .sacola-header { padding: 25px; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+        
+        #conteudo-sacola-scroll { flex: 1; overflow-y: auto; padding: 20px; }
+        
+        .resumo-checkout { padding-top: 20px; margin-top: 20px; border-top: 1px solid #222; }
         .total-container { display: flex; justify-content: space-between; font-size: 20px; font-weight: 900; margin: 15px 0; }
         .input-checkout { width:100%; padding:10px; background:#222; color:#fff; border:1px solid #444; border-radius:8px; margin-bottom:5px; font-size: 13px; }
+
+        .banner-frete-sacola { background: #1a1a1a; border: 1px dashed var(--primary); border-radius: 10px; padding: 15px; text-align: center; margin-bottom: 20px; }
+        .banner-frete-sacola.ativo { border-color: var(--secondary); }
+        .banner-frete-sacola b { color: var(--primary); display: block; font-size: 14px; }
+        .banner-frete-sacola.ativo b { color: var(--secondary); }
 
         .wpp-flutuante { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 4000; text-decoration: none; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
@@ -69,6 +115,8 @@
     </style>
 </head>
 <body>
+
+    <div class="promo-topo">🚚 FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 350,00!</div>
 
     <header>
         <div class="nav-container">
@@ -123,18 +171,170 @@
     </div>
 
     <section class="vitrine">
-        <div class="card" data-time="corinthians">
-            <div class="moldura"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-corinthians-timao-roxa-roxo-lilas-nike-de-treino-treinamento-pre-jogo-aquecimento-gola-escura-redonda-2025-2026-25-26-torcedor-bordado-1-8e0cd98aa28b86333917495920396285-1024-1024.webp"></div>
-            <div class="info"><h3>Corinthians Roxa 25/26</h3><p class="preco">R$ 179,90</p><p class="preco-pix-card">R$ 161,91 no Pix</p><button class="btn-comprar" onclick="abrirModal('Corinthians Roxa 25/26', 179.90)">ADICIONAR</button></div>
-        </div>
-        <div class="card" data-time="flamengo">
-            <div class="moldura"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-flamengo-treino-atleta-azul-clara-2025-adidas-masculina-oficial-4-ea51fe65fbaf1beb3e17520159356629-1024-1024.webp"></div>
-            <div class="info"><h3>Flamengo Treino 25/26</h3><p class="preco">R$ 169,90</p><p class="preco-pix-card">R$ 152,91 no Pix</p><button class="btn-comprar" onclick="abrirModal('Flamengo Treino 25/26', 169.90)">ADICIONAR</button></div>
-        </div>
+     <div class="card" data-time="brasil">
+    <span class="selo-tag">MAIS VENDIDA</span>
+
+    <div class="moldura">
+        ```
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-brasil-selecao-brasileira-edicao-especial-black-preta-preto-e-dourada-versao-torcedorr-2022-2-ced5aa40ed5afbb96717513282144609-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-brasil-selecao-brasileira-edicao-especial-black-preta-preto-e-dourada-versao-torcedorr-2022-2-ced5aa40ed5afbb96717513282144609-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-brasil-selecao-brasileira-edicao-especial-black-preta-preto-e-dourada-versao-torcedorr-2022-25-b59025a7502ad7807617653270249550-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-brasil-selecao-brasileira-edicao-especial-black-preta-preto-e-dourada-versao-torcedorr-2022-23-e44ad1e36c1bfe320517653270249120-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-brasil-selecao-brasileira-edicao-especial-black-preta-preto-e-dourada-versao-torcedorr-2022-3-02d84b4612466c578117513282142317-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+    <div class="info">
+        <h3>Camisa Seleção Brasil Concept Preta e Dourada</h3>
+        <p class="preco">R$ 179,90</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        <button class="btn-comprar" onclick="abrirModal('Camisa Seleção Brasil Concept Preta e Dourada', 179.90)">ADICIONAR</button>
+    </div>
+</div>
+</div>
         <div class="card" data-time="brasil">
-            <div class="moldura"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-retro-titular-brasil-1994-masculina-amarela-umbro-oficial-selecao-brasileira-copa-do-mundo-tetracampeao-2-ec51907c9bac0d0cde17519161447126-1024-1024.webp"></div>
-            <div class="info"><h3>Brasil 1994 I Umbro</h3><p class="preco">R$ 198,00</p><p class="preco-pix-card">R$ 178,20 no Pix</p><button class="btn-comprar" onclick="abrirModal('Brasil 1994 I Umbro', 198.00)">ADICIONAR</button></div>
-        </div>
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-branca-iii-brasil-2019-masculina-nike-gola-azul-1-f2f1fa9b2b2660bda817519035011406-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-branca-iii-brasil-2019-masculina-nike-gola-azul-1-f2f1fa9b2b2660bda817519035011406-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-branca-iii-brasil-2019-masculina-nike-gola-azul-5-62691702673921928617519035011327-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-branca-iii-brasil-2019-masculina-nike-gola-azul-4-0625b3c6705ff48bf017519035016485-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-branca-iii-brasil-2019-masculina-nike-gola-azul-2-58cdef0ccf14fc208817519035011206-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+    <div class="info">
+        <h3>Camisa Brasil III 19/20 Torcedor Nike Masculina - Branca</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        <button class="btn-comprar" onclick="abrirModal('Camisa Brasil III 19/20 Torcedor Nike Masculina - Branca', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+        <div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-feminina-brasil-cacto-preta-dourada-2022-concept-1-3665fbbfdc4617775317519025822042-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-feminina-brasil-cacto-preta-dourada-2022-concept-1-3665fbbfdc4617775317519025822042-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-feminina-brasil-cacto-preta-dourada-2022-concept-5-0f8ff5ac9647ebc09517517548521427-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-feminina-brasil-cacto-preta-dourada-2022-concept-7-93e7f5f84f4555a18017517548522112-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-feminina-brasil-cacto-preta-dourada-2022-concept-4-13e295348951a6f99717517548517680-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Seleção Brasil Edição Concept 2022 Preta e Dourada - Nike - Feminino Torcedor</h3>
+        <p class="preco">R$ 169,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Seleção Brasil Edição Concept 2022 Preta e Dourada - Nike - Feminino Torcedor', 169.00)">ADICIONAR</button>
+    </div>
+</div><div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-brasil-cristo-redentor-2022-amarela-concept-masculina-6-9944d6ace68d6bf33517517539382337-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-brasil-cristo-redentor-2022-amarela-concept-masculina-6-9944d6ace68d6bf33517517539382337-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-brasil-cristo-redentor-2022-amarela-concept-masculina-7-16ac83927b6b27368317517539379828-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-brasil-cristo-redentor-2022-amarela-concept-masculina-5-7b2c53b4e301b1707a17517539382400-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-brasil-cristo-redentor-2022-amarela-concept-masculina-8-99d8e6a9d38ff86b0b17517539380063-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Seleção Brasil Edição Especial Cristo Redentor 22/23 Torcedor Nike Masculina - Amarelo e Verde </h3>
+        <p class="preco">R$ 169,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Seleção Brasil Edição Especial Cristo Redentor 22/23 Torcedor Nike Masculina - Amarelo e Verde ', 169.00)">ADICIONAR</button>
+    </div>
+</div><div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/lancamento-camisa-reedicao-ronaldinho-gaucho-2005-selecao-brasileira-total90-masculina-amarela-nike-brasil-nova-pre-venda-5-c7f7c0f203f333d28e17571902224156-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/lancamento-camisa-reedicao-ronaldinho-gaucho-2005-selecao-brasileira-total90-masculina-amarela-nike-brasil-nova-pre-venda-5-c7f7c0f203f333d28e17571902224156-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/lancamento-camisa-reedicao-ronaldinho-gaucho-2005-selecao-brasileira-total90-masculina-amarela-nike-brasil-nova-pre-venda-1-f3315ea4bece54614b17571902222673-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/lancamento-camisa-reedicao-ronaldinho-gaucho-2005-selecao-brasileira-total90-masculina-amarela-nike-brasil-nova-pre-venda-4-c6107d4d3508553ece17571902226491-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/lancamento-camisa-reedicao-ronaldinho-gaucho-2005-selecao-brasileira-total90-masculina-amarela-nike-brasil-nova-pre-venda-6-5f4a0023a943ea299017571902222203-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Brasil Ronaldinho Total 90 2005 Nike Masculina - Amarela </h3>
+        <p class="preco">R$ 190,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Brasil Ronaldinho Total 90 2005 Nike Masculina - Amarela ', 190.00)">ADICIONAR</button>
+    </div>
+</div><div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-4-b7bf769f51202530e417517523798326-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-4-b7bf769f51202530e417517523798326-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-3-71a87b0b9e673c4e4117517523798819-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-6-56eb91e7c99414c0ee17517523798919-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-1-80fa57c94f1a34256017517523804149-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-selecao-brasileira-feminina-2022-azul-jaguatirica-nike-5-9490be92220b2cf4a917517523798332-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Seleção Brasileira II 2022 Torcedor Nike Feminina - Azul</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Seleção Brasileira II 2022 Torcedor Nike Feminina - Azul', 160.00)">ADICIONAR</button>
+    </div>
+</div><div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-1-6c711b26240c8074bd17505497767306-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-1-6c711b26240c8074bd17505497767306-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-6-809bf3ec43a807088217505497766836-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-5-f789f97f18fb15dc7417505497767604-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-4-f283a3ea6856d6452817505497766927-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-brasil-selecao-brasileira-azul-adidas-cristo-redentor-2025-2026-25-26-concept-conceito-edicao-especial-torcedor-escudo-amarelo-gola-redonda-passaro-masculina-2-1f1a23ef19b7b3906117505497767338-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Seleção Brasileira Concept 2025 Torcedor Nike Masculina - Azul</h3>
+        <p class="preco">R$ 165,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Seleção Brasileira Concept 2025 Torcedor Nike Masculina - Azul', 165.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="brasil">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-concept-brasil-cristo-redentor-2024-25-masculina-5-20301b056e39adbf4217519076971719-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-concept-brasil-cristo-redentor-2024-25-masculina-5-20301b056e39adbf4217519076971719-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-concept-brasil-cristo-redentor-2024-25-masculina-4-7bfec88cfc47f3640917519076970520-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-concept-brasil-cristo-redentor-2024-25-masculina-3-7613f4fff1a5ed447e17519076973401-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-concept-brasil-cristo-redentor-2024-25-masculina-1-3a90c8a72e072f03f217519076968266-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Brasil Edição Especial 24/25 Torcedor Nike Masculina - Preta e cinza</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
+    </div>
+</div>
     </section>
 
     <a href="https://wa.me/5566992607691" class="wpp-flutuante" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -151,40 +351,59 @@
 
     <div id="carrinho-lateral">
         <div class="sacola-header"><h3 style="font-weight: 900;">SACOLA</h3><i class="fas fa-times" onclick="toggleCarrinho()" style="cursor:pointer;"></i></div>
-        <div id="lista-carrinho"></div>
-        <div class="resumo-checkout">
-            <div style="margin-bottom: 15px;">
-                <label style="font-size: 10px; font-weight: 900; color: #666;">ENTREGA:</label>
-                <input type="text" id="cep-cliente" placeholder="CEP" maxlength="8" onblur="buscarEndereco()" class="input-checkout">
-                <div style="display: flex; gap: 5px; margin-bottom: 5px;">
-                    <input type="text" id="estado-cliente" placeholder="UF" class="input-checkout" style="width: 30%;">
-                    <input type="text" id="cidade-cliente" placeholder="Cidade" class="input-checkout" style="width: 70%;" onblur="verificarPatoBranco()">
+        
+        <div id="conteudo-sacola-scroll">
+            
+            <div id="banner-frete" class="banner-frete-sacola">
+                <b id="texto-frete-gratis">ADICIONE MAIS R$ 350,00 PARA FRETE GRÁTIS</b>
+            </div>
+
+            <div id="lista-carrinho"></div>
+
+            <div class="resumo-checkout">
+                <div style="margin-bottom: 15px;">
+                    <label style="font-size: 10px; font-weight: 900; color: #666;">ENTREGA:</label>
+                    <input type="text" id="cep-cliente" placeholder="CEP" maxlength="8" onblur="buscarEndereco()" class="input-checkout">
+                    <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+                        <input type="text" id="estado-cliente" placeholder="UF" class="input-checkout" style="width: 30%;">
+                        <input type="text" id="cidade-cliente" placeholder="Cidade" class="input-checkout" style="width: 70%;" onblur="verificarPatoBranco()">
+                    </div>
+                    <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+                        <input type="text" id="rua-cliente" placeholder="Rua e Bairro" class="input-checkout" style="width: 75%;">
+                        <input type="text" id="num-cliente" placeholder="Nº" class="input-checkout" style="width: 25%;">
+                    </div>
+                    
+                    <label style="font-size: 10px; font-weight: 900; color: #666;">MODO DE ENVIO:</label>
+                    <select id="tipo-frete" onchange="atualizarCarrinho()" class="input-checkout">
+                        <option value="normal">Normal (15-20 dias)</option>
+                        <option value="sedex">SEDEX (8-12 dias)</option>
+                    </select>
                 </div>
-                <input type="text" id="rua-cliente" placeholder="Rua, Número e Bairro" class="input-checkout">
+
+                <label style="font-size: 10px; font-weight: 900; color: #666;">PAGAMENTO:</label>
+                <select id="forma-pagamento" onchange="atualizarCarrinho()" class="input-checkout">
+                    <option value="pix">10% de desconto no Pix</option>
+                    <option value="1x">1x sem juros</option>
+                    <option value="2x">2x sem juros</option>
+                    <option value="3x">3x sem juros</option>
+                    <option value="4x">4x com juros</option>
+                    <option value="5x">5x com juros</option>
+                    <option value="6x">6x com juros</option>
+                    <option value="7x">7x com juros</option>
+                    <option value="8x">8x com juros</option>
+                    <option value="9x">9x com juros</option>
+                    <option value="10x">10x com juros</option>
+                    <option value="11x">11x com juros</option>
+                    <option value="12x">12x com juros</option>
+                </select>
+                <div style="font-size: 12px; color: #aaa;">
+                    <div>Produtos: <span id="resumo-produtos">R$ 0,00</span></div>
+                    <div>Frete: <span id="resumo-frete">R$ 0,00</span></div>
+                    <div id="info-parcela" style="color: var(--secondary); font-weight: bold; margin-top: 5px;"></div>
+                </div>
+                <div class="total-container"><span>TOTAL:</span><span id="total-sacola">R$ 0,00</span></div>
+                <button onclick="enviarPedidoWpp()" style="width:100%; background: var(--secondary); color: white; padding: 18px; border: none; border-radius: 12px; font-weight: 900; cursor: pointer;">FINALIZAR NO WHATSAPP</button>
             </div>
-            <label style="font-size: 10px; font-weight: 900; color: #666;">PAGAMENTO:</label>
-            <select id="forma-pagamento" onchange="atualizarCarrinho()" class="input-checkout">
-                <option value="pix">10% de desconto no Pix</option>
-                <option value="1x">1x sem juros</option>
-                <option value="2x">2x sem juros</option>
-                <option value="3x">3x sem juros</option>
-                <option value="4x">4x com juros</option>
-                <option value="5x">5x com juros</option>
-                <option value="6x">6x com juros</option>
-                <option value="7x">7x com juros</option>
-                <option value="8x">8x com juros</option>
-                <option value="9x">9x com juros</option>
-                <option value="10x">10x com juros</option>
-                <option value="11x">11x com juros</option>
-                <option value="12x">12x com juros</option>
-            </select>
-            <div style="font-size: 12px; color: #aaa;">
-                <div>Produtos: <span id="resumo-produtos">R$ 0,00</span></div>
-                <div>Frete: <span id="resumo-frete">R$ 0,00</span></div>
-                <div id="info-parcela" style="color: var(--secondary); font-weight: bold; margin-top: 5px;"></div>
-            </div>
-            <div class="total-container"><span>TOTAL:</span><span id="total-sacola">R$ 0,00</span></div>
-            <button onclick="enviarPedidoWpp()" style="width:100%; background: var(--secondary); color: white; padding: 18px; border: none; border-radius: 12px; font-weight: 900; cursor: pointer;">FINALIZAR NO WHATSAPP</button>
         </div>
     </div>
 
@@ -234,19 +453,15 @@
                     document.getElementById('estado-cliente').value = data.uf;
                     document.getElementById('cidade-cliente').value = data.localidade;
                     document.getElementById('rua-cliente').value = (data.logradouro || "") + (data.bairro ? ", " + data.bairro : "");
-                    valorFreteBase = data.localidade.toLowerCase().includes("pato branco") ? 0 : (tabelaFretes[data.uf] || 35.0);
-                    atualizarCarrinho();
+                    verificarPatoBranco();
                 }
             } catch (e) {}
         }
 
         function verificarPatoBranco() {
             const cidade = document.getElementById('cidade-cliente').value.toLowerCase();
-            if(cidade.includes("pato branco")) valorFreteBase = 0;
-            else {
-                const uf = document.getElementById('estado-cliente').value;
-                valorFreteBase = tabelaFretes[uf] || 35.0;
-            }
+            const uf = document.getElementById('estado-cliente').value;
+            valorFreteBase = cidade.includes("pato branco") ? 0 : (tabelaFretes[uf] || 35.0);
             atualizarCarrinho();
         }
 
@@ -275,7 +490,10 @@
             const subtotal = carrinho.reduce((acc, item) => acc + item.preco, 0);
             const lista = document.getElementById('lista-carrinho');
             const forma = document.getElementById('forma-pagamento').value;
+            const tipoFrete = document.getElementById('tipo-frete').value;
             const infoParc = document.getElementById('info-parcela');
+            const bannerFrete = document.getElementById('banner-frete');
+            const textoFrete = document.getElementById('texto-frete-gratis');
             
             lista.innerHTML = '';
             carrinho.forEach((item, i) => {
@@ -285,8 +503,24 @@
                 </div>`;
             });
 
+            let freteAplicado = valorFreteBase;
+            
+            if (subtotal >= 350) {
+                freteAplicado = 0;
+                bannerFrete.classList.add('ativo');
+                textoFrete.innerHTML = "🎉 PARABÉNS! VOCÊ GANHOU FRETE GRÁTIS!";
+            } else {
+                let falta = 350 - subtotal;
+                bannerFrete.classList.remove('ativo');
+                textoFrete.innerHTML = `FALTAM R$ ${falta.toFixed(2)} PARA FRETE GRÁTIS`;
+            }
+
+            if (tipoFrete === 'sedex') {
+                freteAplicado += 25.00;
+            }
+
             let taxa = taxasCartao[forma];
-            let total = (subtotal * (1 + taxa)) + valorFreteBase;
+            let total = (subtotal * (1 + taxa)) + freteAplicado;
 
             if (forma === 'pix') {
                 infoParc.innerText = "Desconto de 10% no Pix";
@@ -297,7 +531,7 @@
             }
 
             document.getElementById('resumo-produtos').innerText = `R$ ${subtotal.toFixed(2)}`;
-            document.getElementById('resumo-frete').innerText = valorFreteBase === 0 ? "GRÁTIS" : `R$ ${valorFreteBase.toFixed(2)}`;
+            document.getElementById('resumo-frete').innerText = freteAplicado === 0 ? "GRÁTIS" : `R$ ${freteAplicado.toFixed(2)}`;
             document.getElementById('total-sacola').innerText = `R$ ${total.toFixed(2)}`;
             document.getElementById('cart-count').innerText = carrinho.length;
         }
@@ -310,7 +544,11 @@
             const cidade = document.getElementById('cidade-cliente').value;
             const uf = document.getElementById('estado-cliente').value;
             const rua = document.getElementById('rua-cliente').value;
-            if(!rua || !cidade) return alert("Preencha o endereço completo!");
+            const num = document.getElementById('num-cliente').value;
+            const tipoFreteCod = document.getElementById('tipo-frete').value;
+            const tipoFreteTexto = (tipoFreteCod === 'sedex') ? 'SEDEX' : 'Normal';
+            
+            if(!rua || !cidade || !num) return alert("Preencha o endereço completo com número!");
 
             const numPedido = Math.floor(1000 + Math.random() * 9000);
             const formaPaga = document.getElementById('info-parcela').innerText;
@@ -318,14 +556,27 @@
 
             let texto = `*PEDIDO FIEL IMPORTADOS* (#${numPedido})\n\n`;
             carrinho.forEach(i => texto += `• ${i.nome} (${i.tam}) [${i.perso}]\n`);
+            texto += `\n*ENVIO:* ${tipoFreteTexto}`;
             texto += `\n*PAGAMENTO:* ${formaPaga}`;
-            texto += `\n*TOTAL:* ${totalFinal}`;
+            texto += `\n*VALOR TOTAL:* ${totalFinal}`;
             texto += `\n\n*ENDEREÇO DE ENTREGA:*`;
-            texto += `\n📍 ${rua}`;
+            texto += `\n📍 ${rua}, Nº ${num}`;
             texto += `\n🏙️ ${cidade} - ${uf}`;
             texto += `\n📮 CEP: ${cep}`;
 
             window.open(`https://wa.me/5566992607691?text=${encodeURIComponent(texto)}`);
+        }
+
+        function mudarFoto(botao, direcao) {
+            const moldura = botao.parentElement;
+            const img = moldura.querySelector('img');
+            const lista = moldura.querySelector('.fotos-lista').value.split(',');
+            let index = parseInt(moldura.querySelector('.foto-atual').value);
+            index += direcao;
+            if (index >= lista.length) index = 0;
+            if (index < 0) index = lista.length - 1;
+            img.src = lista[index];
+            moldura.querySelector('.foto-atual').value = index;
         }
     </script>
 </body>
