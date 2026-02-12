@@ -112,6 +112,106 @@
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 11px; color: #aaa; text-transform: uppercase; }
         .form-group select, .form-group input { width: 100%; padding: 15px; background: #222; border: 1px solid #444; border-radius: 12px; color: #fff; }
+/* Novo Menu de Categorias abaixo da busca */
+.filtro-categorias-container {
+    background: #000;
+    padding: 5px 5%; /* Diminuí o padding para ficar mais fina */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 1px solid #222;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    /* AJUSTE DE POSIÇÃO */
+    position: sticky;
+    top: 107px; /* A pesquisa termina em 107px (60 de altura + 47 de padding) */
+    z-index: 1999; 
+    height: 45px; /* Altura fixa para não variar */
+    align-items: center;
+}
+
+/* Ajuste nos botões para não sumirem */
+.categoria-btn {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 5px 12px;
+    opacity: 0.6;
+    display: inline-block;
+}
+
+.categoria-btn.ativo {
+    opacity: 1;
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+}
+/* Garante que a barra de pesquisa não cubra o filtro */
+.search-container { 
+    background: #000; 
+    padding: 10px 0; /* Removi o padding de 5% das laterais */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-bottom: 1px solid #222; 
+    position: sticky; 
+    top: 61px; /* Logo abaixo do header (que tem ~60px) */
+    z-index: 2000; 
+    width: 100%;
+}
+
+.search-box { 
+    position: relative; 
+    width: 90%; /* Ocupa quase toda a tela no mobile */
+    max-width: 600px; /* Mas não passa de 600px no PC */
+    margin: 0 auto; /* Centraliza o bloco */
+}/* Esconde a barrinha de rolagem horizontal no mobile para ficar mais limpo */
+.filtro-categorias-container::-webkit-scrollbar {
+    display: none;
+}
+.filtro-categorias-container {
+    background: #000;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid #222;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    position: sticky;
+    top: 121px; /* VALOR CHAVE: Ajuste aqui se ainda houver sobreposição */
+    z-index: 1999; 
+    height: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Deixa os botões mais "limpos" como na sua imagem */
+.categoria-btn {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.categoria-btn.ativo {
+    opacity: 1;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    background: rgba(255, 71, 87, 0.1); /* Um leve brilho vermelho no fundo */
+}
+.categoria-btn.ativo {
+    opacity: 1;
+    background: #111;
+    border-color: var(--primary);
+}
     </style>
 </head>
 <body>
@@ -134,7 +234,12 @@
             <input type="text" id="inputBusca" placeholder="Pesquisar camisa, time ou liga..." onkeyup="buscarProdutos()">
         </div>
     </div>
-
+<div class="filtro-categorias-container">
+    <div class="categoria-btn ativo" onclick="filtrarGrupo('todos', this)">Todos</div>
+    <div class="categoria-btn" onclick="filtrarGrupo('serie-a', this)">Série A</div>
+    <div class="categoria-btn" onclick="filtrarGrupo('selecoes', this)">Seleções</div>
+    <div class="categoria-btn" onclick="filtrarGrupo('outros', this)">Outros</div>
+</div>
     <section class="beneficios">
         <div class="beneficio-item"><i class="fas fa-certificate"></i><h4>Qualidade Premium</h4><p>Padrão de Jogador 1:1</p></div>
         <div class="beneficio-item"><i class="fas fa-credit-card"></i><h4>Tudo em até 12x</h4><p>3x sem juros no cartão</p></div>
@@ -152,19 +257,28 @@
         <div class="roleta-wrapper">
             <div class="roleta-container" id="roleta">
                 <div class="escudo-item ativo" onclick="filtrar('todos', this)"><img src="https://cdn-icons-png.flaticon.com/512/33/33736.png"><p>TODOS</p></div>
-                <div class="escudo-item" onclick="filtrar('brasil', this)"><img src="https://images.vexels.com/media/users/3/152348/isolated/preview/e292f8cec7eae5f8f4f25bcc36cfe5f5-logo-da-selecao-brasileira-de-futebol.png"><p>BRASIL</p></div>
-                <div class="escudo-item" onclick="filtrar('corinthians', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761767726223-1266909200-423ac9fbe74060122ec071758e87db201761768095-1400-1400.webp"><p>TIMÃO</p></div>
-                <div class="escudo-item" onclick="filtrar('flamengo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6040068114-b9737bb2a583c275f38ce1e75764efce1761683247-1400-1400.webp"><p>FLA</p></div>
-                <div class="escudo-item" onclick="filtrar('saopaulo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6463047056-ba7c02c19011d25dfa1bc61d4d13b06a1761683247-1400-1400.webp"><p>SPFC</p></div>
-                <div class="escudo-item" onclick="filtrar('palmeiras', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682991550-7882511270-b17288606169aca4920cd0a11171890a1761683359-1400-1400.webp"><p>VERDÃO</p></div>
-                <div class="escudo-item" onclick="filtrar('vasco', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1260154421-0baf0a950494c94546359d8367df8c131763066292-1400-1400.webp"><p>VASCO</p></div>
-                <div class="escudo-item" onclick="filtrar('santos', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065698643-589024690-76e8034ed9e94f52e429e8a5764ff0231763066101-1400-1400.webp"><p>SANTOS</p></div>
-                <div class="escudo-item" onclick="filtrar('botafogo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-4479546133-af2647045fefa40ef226d8f270af7f381763066292-1400-1400.webp"><p>FOGO</p></div>
-                <div class="escudo-item" onclick="filtrar('fluminense', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-7253022095-603f15c5cae0a945920779fb327c7a0d1763066292-1400-1400.webp"><p>FLU</p></div>
-                <div class="escudo-item" onclick="filtrar('internacional', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1627892328-ed33217c65a531f43293ec237a9066ea1763066292-1400-1400.webp"><p>INTER</p></div>
-                <div class="escudo-item" onclick="filtrar('cruzeiro', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-914227699-28561a5118d1f9f0d64d8ff1efefd90b1763066293-1400-1400.webp"><p>CRUZEIRO</p></div>
-                <div class="escudo-item" onclick="filtrar('atletico', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-411894232-ccec1c618636914e76696b1cff3da2e71763066293-1400-1400.webp"><p>GALO</p></div>
-                <div class="escudo-item" onclick="filtrar('gremio', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889536-3459085592-a4a8763d492b78234226db24461690391763066293-1400-1400.webp"><p>GREMIO</p></div>
+               <div class="escudo-item grupo-selecoes" onclick="filtrar('brasil', this)"><img src="https://images.vexels.com/media/users/3/152348/isolated/preview/e292f8cec7eae5f8f4f25bcc36cfe5f5-logo-da-selecao-brasileira-de-futebol.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('corinthians', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761767726223-1266909200-423ac9fbe74060122ec071758e87db201761768095-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('flamengo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6040068114-b9737bb2a583c275f38ce1e75764efce1761683247-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('saopaulo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6463047056-ba7c02c19011d25dfa1bc61d4d13b06a1761683247-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('palmeiras', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682991550-7882511270-b17288606169aca4920cd0a11171890a1761683359-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('vasco', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1260154421-0baf0a950494c94546359d8367df8c131763066292-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('santos', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065698643-589024690-76e8034ed9e94f52e429e8a5764ff0231763066101-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('botafogo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-4479546133-af2647045fefa40ef226d8f270af7f381763066292-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('fluminense', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-7253022095-603f15c5cae0a945920779fb327c7a0d1763066292-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('internacional', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-1627892328-ed33217c65a531f43293ec237a9066ea1763066292-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('cruzeiro', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-914227699-28561a5118d1f9f0d64d8ff1efefd90b1763066293-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('atletico', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-411894232-ccec1c618636914e76696b1cff3da2e71763066293-1400-1400.webp"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('gremio', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889536-3459085592-a4a8763d492b78234226db24461690391763066293-1400-1400.webp"><p></p></div>
+                 <div class="escudo-item grupo-serie-a" onclick="filtrar('bahia', this)"><img src="https://i.pinimg.com/736x/54/9b/77/549b77de363b0d24ae9809467e4dc94a.jpg"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('bragantino', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/9/9e/RedBullBragantino.png"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('chapecoense', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/b/bc/Escudo_de_2018_da_Chapecoense.png"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('mirassol', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Mirassol_FC_logo.png"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('coritiba', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/8/87/ICoritibaFBC.png"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('athleticopr', this)"><img src="https://i.pinimg.com/474x/67/74/ab/6774ab3f8b9aed9432e0a58c2ebe2841.jpg"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('vitoria', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Esporte_Clube_Vit%C3%B3ria.png"><p></p></div>
+ <div class="escudo-item grupo-serie-a" onclick="filtrar('remo', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Clube-do-remo-atual.png"><p></p></div>
+
             </div>
         </div>
         <button class="btn-roleta btn-next" onclick="scrollRoleta(1)"><i class="fas fa-chevron-right"></i></button>
@@ -3644,6 +3758,41 @@
             img.src = lista[index];
             moldura.querySelector('.foto-atual').value = index;
         }
+function filtrarGrupo(grupo, elemento) {
+    // 1. Atualiza visual do botão de categoria
+    document.querySelectorAll('.categoria-btn').forEach(btn => btn.classList.remove('ativo'));
+    elemento.classList.add('ativo');
+
+    // 2. Filtra os itens dentro da roleta
+    const itensRoleta = document.querySelectorAll('.escudo-item');
+    
+    itensRoleta.forEach(item => {
+        // Sempre mostra o botão "TODOS" da roleta
+        if (item.classList.contains('grupo-todos')) {
+            item.style.display = 'block';
+            return;
+        }
+
+        if (grupo === 'todos') {
+            item.style.display = 'block';
+        } else {
+            // Verifica se o item tem a classe do grupo (ex: grupo-serie-a)
+            if (item.classList.contains('grupo-' + grupo)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
+
+    // 3. Reseta a posição da roleta para o início
+    const roleta = document.getElementById('roleta');
+    roleta.style.transform = 'translateX(0)';
+    posicaoAtual = 0;
+
+    // 4. (Opcional) Reseta a vitrine para mostrar todos os produtos do grupo
+    filtrar('todos', document.querySelector('.grupo-todos'));
+}
     </script>
 </body>
 </html>
