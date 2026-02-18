@@ -237,8 +237,10 @@
 <div class="filtro-categorias-container">
     <div class="categoria-btn ativo" onclick="filtrarGrupo('todos', this)">Todos</div>
     <div class="categoria-btn" onclick="filtrarGrupo('serie-a', this)">Série A</div>
-    <div class="categoria-btn" onclick="filtrarGrupo('selecoes', this)">Seleções</div>
-    <div class="categoria-btn" onclick="filtrarGrupo('outros', this)">Outros</div>
+<div class="categoria-btn" onclick="filtrarGrupo('clubeseuropeu', this)">Clubes Europeus</div>
+    <div class="categoria-btn" onclick="filtrarGrupo('copa2026', this)">COPA 2026</div>
+<div class="categoria-btn" onclick="filtrarGrupo('', this)"></div>
+    
 </div>
     <section class="beneficios">
         <div class="beneficio-item"><i class="fas fa-certificate"></i><h4>Qualidade Premium</h4><p>Padrão de Jogador 1:1</p></div>
@@ -256,8 +258,8 @@
         <button class="btn-roleta btn-prev" onclick="scrollRoleta(-1)"><i class="fas fa-chevron-left"></i></button>
         <div class="roleta-wrapper">
             <div class="roleta-container" id="roleta">
-                <div class="escudo-item ativo" onclick="filtrar('todos', this)"><img src="https://cdn-icons-png.flaticon.com/512/33/33736.png"><p>TODOS</p></div>
-               <div class="escudo-item grupo-selecoes" onclick="filtrar('brasil', this)"><img src="https://images.vexels.com/media/users/3/152348/isolated/preview/e292f8cec7eae5f8f4f25bcc36cfe5f5-logo-da-selecao-brasileira-de-futebol.png"><p></p></div>
+               
+               <div class="escudo-item grupo-copa2026" onclick="filtrar('brasil', this)"><img src="https://images.vexels.com/media/users/3/152348/isolated/preview/e292f8cec7eae5f8f4f25bcc36cfe5f5-logo-da-selecao-brasileira-de-futebol.png"><p></p></div>
                 <div class="escudo-item grupo-serie-a" onclick="filtrar('corinthians', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761767726223-1266909200-423ac9fbe74060122ec071758e87db201761768095-1400-1400.webp"><p></p></div>
                  <div class="escudo-item grupo-serie-a" onclick="filtrar('flamengo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6040068114-b9737bb2a583c275f38ce1e75764efce1761683247-1400-1400.webp"><p></p></div>
                  <div class="escudo-item grupo-serie-a" onclick="filtrar('saopaulo', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1761682879827-6463047056-ba7c02c19011d25dfa1bc61d4d13b06a1761683247-1400-1400.webp"><p></p></div>
@@ -270,14 +272,29 @@
                  <div class="escudo-item grupo-serie-a" onclick="filtrar('cruzeiro', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-914227699-28561a5118d1f9f0d64d8ff1efefd90b1763066293-1400-1400.webp"><p></p></div>
                  <div class="escudo-item grupo-serie-a" onclick="filtrar('atletico', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889535-411894232-ccec1c618636914e76696b1cff3da2e71763066293-1400-1400.webp"><p></p></div>
                 <div class="escudo-item grupo-serie-a" onclick="filtrar('gremio', this)"><img src="https://acdn-us.mitiendanube.com/stores/002/042/833/themes/brasilia/2-slide-1763065889536-3459085592-a4a8763d492b78234226db24461690391763066293-1400-1400.webp"><p></p></div>
-                 <div class="escudo-item grupo-serie-a" onclick="filtrar('bahia', this)"><img src="https://i.pinimg.com/736x/54/9b/77/549b77de363b0d24ae9809467e4dc94a.jpg"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('bragantino', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/9/9e/RedBullBragantino.png"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('chapecoense', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/b/bc/Escudo_de_2018_da_Chapecoense.png"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('mirassol', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Mirassol_FC_logo.png"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('coritiba', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/8/87/ICoritibaFBC.png"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('athleticopr', this)"><img src="https://i.pinimg.com/474x/67/74/ab/6774ab3f8b9aed9432e0a58c2ebe2841.jpg"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('vitoria', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Esporte_Clube_Vit%C3%B3ria.png"><p></p></div>
- <div class="escudo-item grupo-serie-a" onclick="filtrar('remo', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Clube-do-remo-atual.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('bahia', this)"><img src="https://i.pinimg.com/736x/54/9b/77/549b77de363b0d24ae9809467e4dc94a.jpg"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('bragantino', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/9/9e/RedBullBragantino.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('chapecoense', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/b/bc/Escudo_de_2018_da_Chapecoense.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('mirassol', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Mirassol_FC_logo.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('coritiba', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/8/87/ICoritibaFBC.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('athleticopr', this)"><img src="https://i.pinimg.com/474x/67/74/ab/6774ab3f8b9aed9432e0a58c2ebe2841.jpg"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('vitoria', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Esporte_Clube_Vit%C3%B3ria.png"><p></p></div>
+                <div class="escudo-item grupo-serie-a" onclick="filtrar('remo', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Clube-do-remo-atual.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('realmadrid', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/9/98/Real_Madrid.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('barcelona', this)"><img src="https://thumbs.dreamstime.com/b/o-emblema-do-clube-de-futebol-barcelona-espanha-isolado-sobre-fundo-branco-165379584.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('ManchesterUnited', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/b/b6/Manchester_United_FC_logo.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('ManchesterCity', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/0/02/Manchester_City_Football_Club.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('liverpool', this)"><img src="https://thumbs.dreamstime.com/b/o-emblema-do-clube-de-futebol-liverpool-inglaterra-isolado-sobre-fundo-branco-164814124.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('chelsea', this)"><img src="https://thumbs.dreamstime.com/b/editorial-do-log%C3%B3tipo-clube-de-futebol-chelsea-ilustrativo-dos-antecedentes-brancos-times-da-primeira-liga-%C3%ADcone-logotipo-210280580.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('arsenal ', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/53/Arsenal_FC.svg/1280px-Arsenal_FC.svg.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('BayernMunique', this)"><img src="https://www.shutterstock.com/image-vector/fc-bayern-munich-icon-logo-600nw-2268233419.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('BorussiaDortmund', this)"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Borussia_Dortmund.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('psg', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/d/d2/Logo_PSG.png"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('juventus', this)"><img src="https://thumbs.dreamstime.com/b/logotipo-do-clube-futebol-de-juventus-ilustra%C3%A7%C3%A3o-vetor-isolada-no-fundo-branco-137882092.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('milan', this)"><img src="https://thumbs.dreamstime.com/b/emblema-da-associazione-calcio-mil%C3%A3o-isolado-em-fundo-branco-ac-milan-%C3%A9-um-clube-de-futebol-profissional-italiano-com-sede-396996200.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('InterMilão', this)"><img src="https://i.pinimg.com/736x/a6/04/33/a60433be99f2d28de1c1252ee9f13a28.jpg"><p></p></div>
+                <div class="escudo-item grupo-clubeseuropeu" onclick="filtrar('AtléticoMadrid', this)"><img src="https://upload.wikimedia.org/wikipedia/pt/1/19/AtleticoMadrid2017.png"><p></p></div>
+
 
             </div>
         </div>
@@ -4211,7 +4228,1247 @@
         <button class="btn-comprar" onclick="abrirModal('Camisa Remo 1960 - Liga Retro - Masculina', 170.00)">ADICIONAR</button>
     </div>
 </div>
-<div class="card" data-time="brasil">
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-3-azul-2025-26-adidas-5-e84759e113bb189c4b17616127652508-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-3-azul-2025-26-adidas-5-e84759e113bb189c4b17616127652508-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-3-azul-2025-26-adidas-3-682ff74c443b45118017616127651015-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-3-azul-2025-26-adidas-2-eaa299b45959bbae1217616127652447-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-3-azul-2025-26-adidas-4-e6886c052ea7aab4c917616127651855-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid III 2025/26 Adidas Torcedor Masculina - Azul</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid III 2025/26 Adidas Torcedor Masculina - Azul', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-3-iii-third-terceira-terceiro-preta-preto-cinza-adidas-gola-polo-emirates-24-25-2024-2025-mbappe-masculina-masculino-4-78a198dfa7adfa8d0a17265280691909-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-3-iii-third-terceira-terceiro-preta-preto-cinza-adidas-gola-polo-emirates-24-25-2024-2025-mbappe-masculina-masculino-4-78a198dfa7adfa8d0a17265280691909-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-3-iii-third-terceira-terceiro-preta-preto-cinza-adidas-gola-polo-emirates-24-25-2024-2025-mbappe-masculina-masculino-2-3a01f88189e496f44017265280691631-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-3-iii-third-terceira-terceiro-preta-preto-cinza-adidas-gola-polo-emirates-24-25-2024-2025-mbappe-masculina-masculino-3-9b7c1984cc870adaa617265280696611-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid III 24/25 Torcedor Adidas Masculina - Cinza </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid III 24/25 Torcedor Adidas Masculina - Cinza ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-masculina-masculino-24-25-2024-2025-04133f20c5d0da3ddb17215758790688-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-masculina-masculino-24-25-2024-2025-04133f20c5d0da3ddb17215758790688-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-masculina-masculino-24-25-2024-2025-3-c901c6823a77b520f117215758791926-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-masculina-masculino-24-25-2024-2025-4-f73b26798608d4c17817215758794463-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-masculina-masculino-24-25-2024-2025-2-0a2353c1d3d3f1377917215758794776-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid I 24/25 Torcedor Adidas Masculina - Branco</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid I 24/25 Torcedor Adidas Masculina - Branco', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-feminina-feminino-girl-mulher-24-25-2024-2025-1b183b8ca97ef53d5417216857336528-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-feminina-feminino-girl-mulher-24-25-2024-2025-1b183b8ca97ef53d5417216857336528-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-feminina-feminino-girl-mulher-24-25-2024-2025-3-2e1d175e0ca72bc73517216857339988-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-galaticos-1-i-home-casa-titular-branca-branco-emirates-adidas-mbappe-feminina-feminino-girl-mulher-24-25-2024-2025-2-d9dffe06db8190388617216857339465-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid I 24/25 Torcedor Adidas Feminina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid I 24/25 Torcedor Adidas Feminina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-us-pack-2025-2026-adidas-edicao-especial-1-a5c41ce08e65f4470a17516763885300-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-us-pack-2025-2026-adidas-edicao-especial-1-a5c41ce08e65f4470a17516763885300-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-us-pack-2025-2026-adidas-edicao-especial-5-25b129778fdbcda60d17516763883064-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-us-pack-2025-2026-adidas-edicao-especial-3-e09009189c66b004dc17516763885041-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-us-pack-2025-2026-adidas-edicao-especial-2-62903598a521c28ad617516763883886-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid Us Pack 25/26 Adidas Masculina - Branca</h3>
+        <p class="preco">R$ 175,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid Us Pack 25/26 Adidas Masculina - Branca', 175.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-1-i-home-casa-titular-branca-branco-adidas-emirates-fly-better-25-26-2025-2026-linha-amarela-torcedor-2-9667d81d53dd3f0af817494244373815-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-1-i-home-casa-titular-branca-branco-adidas-emirates-fly-better-25-26-2025-2026-linha-amarela-torcedor-2-9667d81d53dd3f0af817494244373815-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-1-i-home-casa-titular-branca-branco-adidas-emirates-fly-better-25-26-2025-2026-linha-amarela-torcedor-6-9aea531d5bb7795fa717494244373937-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-1-i-home-casa-titular-branca-branco-adidas-emirates-fly-better-25-26-2025-2026-linha-amarela-torcedor-4-697a31837bb306746717494244371356-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-1-i-home-casa-titular-branca-branco-adidas-emirates-fly-better-25-26-2025-2026-linha-amarela-torcedor-3-f1c020282aef96a1ef17494244374898-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid I 25/26 Torcedor Adidas Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid I 25/26 Torcedor Adidas Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-laranja-orange-adidas-2-ii-away-fora-visitante-reserva-emirates-militao-mbappe-alaranjada-24-25-2024-2025-masculina-masculino-4-675022edb25d5f0b4117216862626101-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-laranja-orange-adidas-2-ii-away-fora-visitante-reserva-emirates-militao-mbappe-alaranjada-24-25-2024-2025-masculina-masculino-4-675022edb25d5f0b4117216862626101-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-laranja-orange-adidas-2-ii-away-fora-visitante-reserva-emirates-militao-mbappe-alaranjada-24-25-2024-2025-masculina-masculino-fb5e97cf9e01715d2c17216862623111-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-laranja-orange-adidas-2-ii-away-fora-visitante-reserva-emirates-militao-mbappe-alaranjada-24-25-2024-2025-masculina-masculino-2-3af1b4ff269cb7a0b117216862622837-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid II 24/25 - Torcedor Adidas Masculina - Laranja </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid II 24/25 - Torcedor Adidas Masculina - Laranja ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9274-7f3ee63ddd040c154517562036317220-1024-1024-63e331965c6204982817634241485209-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9274-7f3ee63ddd040c154517562036317220-1024-1024-63e331965c6204982817634241485209-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9275-9b42f5577c43f8835517562036316160-1024-1024-433a5a93474188492717634241499190-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid III 25/26 - Torcedor Adidas Feminina - Azul</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid III 25/26 - Torcedor Adidas Feminina - Azul', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-retro-do-real-madrid-ii-2-away-fora-visitante-preta-preto-teka-adidas-com-detalhes-amarelo-gola-v-polo-brilhante-98-99-1998-1999-antiga-vintage-masculina-1-cfe9ccb5a1313df79b17434603263085-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-retro-do-real-madrid-ii-2-away-fora-visitante-preta-preto-teka-adidas-com-detalhes-amarelo-gola-v-polo-brilhante-98-99-1998-1999-antiga-vintage-masculina-1-cfe9ccb5a1313df79b17434603263085-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-retro-do-real-madrid-ii-2-away-fora-visitante-preta-preto-teka-adidas-com-detalhes-amarelo-gola-v-polo-brilhante-98-99-1998-1999-antiga-vintage-masculina-3-f5e188fb960578076b17434603260422-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-retro-do-real-madrid-ii-2-away-fora-visitante-preta-preto-teka-adidas-com-detalhes-amarelo-gola-v-polo-brilhante-98-99-1998-1999-antiga-vintage-masculina-5-f1d425dfe245815dc717434603264673-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-retro-do-real-madrid-ii-2-away-fora-visitante-preta-preto-teka-adidas-com-detalhes-amarelo-gola-v-polo-brilhante-98-99-1998-1999-antiga-vintage-masculina-2-40c01303348bd3a05017434603264441-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid II Retrô 98/99 Torcedor Adidas Masculina - Preta</h3>
+        <p class="preco">R$ 180,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid II Retrô 98/99 Torcedor Adidas Masculina - Preta', 180.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-25-26-2025-2026-ii-away-reserva-fora-visitante-cinza-azul-marinho-adidas-marcelo-emirates-fly-better-hp-patrocinio-torcedor-fan-listra-verde-1-c08a395371ba03b74c17500988726906-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-25-26-2025-2026-ii-away-reserva-fora-visitante-cinza-azul-marinho-adidas-marcelo-emirates-fly-better-hp-patrocinio-torcedor-fan-listra-verde-1-c08a395371ba03b74c17500988726906-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-25-26-2025-2026-ii-away-reserva-fora-visitante-cinza-azul-marinho-adidas-marcelo-emirates-fly-better-hp-patrocinio-torcedor-fan-listra-verde-1-6-c16db2f74acdcbffe917500988726834-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-25-26-2025-2026-ii-away-reserva-fora-visitante-cinza-azul-marinho-adidas-marcelo-emirates-fly-better-hp-patrocinio-torcedor-fan-listra-verde-1-5-9ad0ecc6fac0764b7117500988724282-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-real-madrid-25-26-2025-2026-ii-away-reserva-fora-visitante-cinza-azul-marinho-adidas-marcelo-emirates-fly-better-hp-patrocinio-torcedor-fan-listra-verde-1-3-5d0a9b42016547fe0c17500988723071-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid II 25/26 Torcedor Adidas Masculina - Azul Marinho</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid II 25/26 Torcedor Adidas Masculina - Azul Marinho', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="realmadrid">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/photoroom-20230812_230940_11-bc79abd4a169ae90d716918926780641-1024-1024-3d8108c1d98a19872d16957747379040-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/photoroom-20230812_230940_11-bc79abd4a169ae90d716918926780641-1024-1024-3d8108c1d98a19872d16957747379040-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/photoroom-20230812_230940_31-babb9a607d6fdce5c116918926767793-1024-1024-4b5a4c8c71bc66c18b16957747442739-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-real-madrid-edicao-especial-dourada-masculino-torcedor-23-24-81-812efd8d10790ea68216916751247273-1024-1024-943729c39a54ebf53816957747805911-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/photoroom-20230812_230940_21-aaeaf00e79ae8bef7c16918926764912-1024-1024-9954d4f36c3e97fd6c16957747506123-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Real Madrid Edição Especial 23/24 - Torcedor Adidas Masculina - Dourado</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Real Madrid Edição Especial 23/24 - Torcedor Adidas Masculina - Dourado', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8080-ab5926f2e66f54539b17559948449764-1024-1024-36d8fa06a43ed6985b17634240044367-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8080-ab5926f2e66f54539b17559948449764-1024-1024-36d8fa06a43ed6985b17634240044367-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8081-2abf713a51173eaf8317559948449694-1024-1024-bf6271ebdced302a5117634240062270-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona Pré-jogo 25/26 - Torcedor Nike Masculina - Azul e laranja</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona Pré-jogo 25/26 - Torcedor Nike Masculina - Azul e laranja', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-i-1-home-casa-titular-novo-lancamento-2025-2026-25-26-nike-degrade-azul-e-vermelho-spotify-gola-redonda-masculina-torcedor-1-f2ce7922dc757a89d517446669971628-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-i-1-home-casa-titular-novo-lancamento-2025-2026-25-26-nike-degrade-azul-e-vermelho-spotify-gola-redonda-masculina-torcedor-1-f2ce7922dc757a89d517446669971628-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-i-1-home-casa-titular-novo-lancamento-2025-2026-25-26-nike-degrade-azul-e-vermelho-spotify-gola-redonda-masculina-torcedor-4-f9c63b74751eaf8a8f17446669970797-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-i-1-home-casa-titular-novo-lancamento-2025-2026-25-26-nike-degrade-azul-e-vermelho-spotify-gola-redonda-masculina-torcedor-5-4e876756297df732c317446669970738-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-i-1-home-casa-titular-novo-lancamento-2025-2026-25-26-nike-degrade-azul-e-vermelho-spotify-gola-redonda-masculina-torcedor-2-3c09b520d8c511376817446669972435-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona I 25/26 - Torcedor Nike Masculina - Azul e Grená </h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona I 25/26 - Torcedor Nike Masculina - Azul e Grená ', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_6713-ac8da355c0438fb52f17696969975894-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_6713-ac8da355c0438fb52f17696969975894-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_6714-0454a3b1bb4ed3313017696969976234-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona 2002 II Retrô Nike Masculina - Dourada</h3>
+        <p class="preco">R$ 190,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona 2002 II Retrô Nike Masculina - Dourada', 190.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2682-4b0fbe86cb8055ccf417594207555670-1024-1024-d779e276233f9d30f817634245173618-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2682-4b0fbe86cb8055ccf417594207555670-1024-1024-d779e276233f9d30f817634245173618-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2683-e4967ae17ea50b456717594207564594-1024-1024-93cc88504b1d4fc12c17634245189733-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona Edição Especial 25/26 - Jogador Nike Masculina - Rosa </h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona Edição Especial 25/26 - Jogador Nike Masculina - Rosa ', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8068-9efb57042a7474e33017559909528129-1024-1024-fc6c723c7794eb827c17634240008149-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8068-9efb57042a7474e33017559909528129-1024-1024-fc6c723c7794eb827c17634240008149-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8049-c7b8e037e0aad3c24d17559909544322-1024-1024-f069b5cb10247e362117634240037024-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8069-b1c1a4a68c0aedd01a17559909525232-1024-1024-204e2499876d9d0a1517634240023507-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona II 25/26 - Torcedor Nike Feminina - Amarela</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona II 25/26 - Torcedor Nike Feminina - Amarela', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-7-e3c5ddf40fb4a1416317526275324661-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-7-e3c5ddf40fb4a1416317526275324661-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-5-c5855b066b5233c22b17526275204028-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-1-de758697b8da44e24f17526275206103-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-4-f1979decdd3cab720117526275201974-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-edicao-especial-barcelona-travis-scott-2025-2026-masculina-azul-grana-nike-exclusiva-fc-barcelona-6-1c74fc6623a2f5852117526275204237-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona Travis Scott 2025/26 Nike Masculina - Azul e vermelha</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona Travis Scott 2025/26 Nike Masculina - Azul e vermelha', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-barcelona-2025-2026-away-dourada-kobe-spotify-nike-amarela-bege-simbolo-gola-azul-e-preta-escudo-refletivo-1-beb621f824f50708d017516775084446-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-barcelona-2025-2026-away-dourada-kobe-spotify-nike-amarela-bege-simbolo-gola-azul-e-preta-escudo-refletivo-1-beb621f824f50708d017516775084446-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-barcelona-2025-2026-away-dourada-kobe-spotify-nike-amarela-bege-simbolo-gola-azul-e-preta-escudo-refletivo-5-46ef92471f72bc9a7617516775082655-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-barcelona-2025-2026-away-dourada-kobe-spotify-nike-amarela-bege-simbolo-gola-azul-e-preta-escudo-refletivo-6-9cc2bf672b0ac0e7a817516775083791-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-barcelona-2025-2026-away-dourada-kobe-spotify-nike-amarela-bege-simbolo-gola-azul-e-preta-escudo-refletivo-3-c3fc2ce09deb00304317516775082363-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona II 25/26 - Torcedor Nike Masculina - Amarela Dourada</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona II 25/26 - Torcedor Nike Masculina - Amarela Dourada', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/1_maillot-concept-barca-rose-2025-2026-1-jpg-08603754a1ea57e00917594114285131-1024-1024-78b9b17a222d9b304d17634245055665-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/1_maillot-concept-barca-rose-2025-2026-1-jpg-08603754a1ea57e00917594114285131-1024-1024-78b9b17a222d9b304d17634245055665-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/2_maillot-concept-barca-rose-2025-2026-2-jpg-3f9e8d0e6ace40a60d17594114292953-1024-1024-3780ccd554697a845317634245074016-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona Edição Especial 25/26 - Torcedor Nike Feminina - Rosa</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona Edição Especial 25/26 - Torcedor Nike Feminina - Rosa', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8050-aeaea8fa8e310199e217559905693089-1024-1024-bc98e9f303c89e5c8917634239989675-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8050-aeaea8fa8e310199e217559905693089-1024-1024-bc98e9f303c89e5c8917634239989675-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8051-91f834176a0900f70217559905693341-1024-1024-352bf2de81ce969aac17634240007591-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona III Total 90 25/26 - Torcedor Nike Masculina - Laranja</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona III Total 90 25/26 - Torcedor Nike Masculina - Laranja', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2450-e1094f755a0840497c17593559709484-1024-1024-3ed20c603c53593e1917634244758532-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2450-e1094f755a0840497c17593559709484-1024-1024-3ed20c603c53593e1917634244758532-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_2451-17bcc92587be9b709e17593559709082-1024-1024-68da0cd0fc62afa23017634244775248-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona IV 25/26 - Torcedor Nike Masculina - Azul e vermelha</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona IV 25/26 - Torcedor Nike Masculina - Azul e vermelha', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-barcelona-2025-2026-feminina-azul-grana-nike-oficial-fc-barcelona-spotify-6-e99247b8d3157d72b117530530037804-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-barcelona-2025-2026-feminina-azul-grana-nike-oficial-fc-barcelona-spotify-6-e99247b8d3157d72b117530530037804-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-barcelona-2025-2026-feminina-azul-grana-nike-oficial-fc-barcelona-spotify-3-02901b8bd1f2a98fd917530530034417-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-barcelona-2025-2026-feminina-azul-grana-nike-oficial-fc-barcelona-spotify-7-949eee6bd3a8ce7fd117530530032160-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-barcelona-2025-2026-feminina-azul-grana-nike-oficial-fc-barcelona-spotify-5-73a7aef69a52aecb0917530530035797-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona 2025/26 I - Feminina Nike - Azul e Grená</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona 2025/26 I - Feminina Nike - Azul e Grená', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="barcelona">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-barca-branca-branco-edicao-especial-lamine-yamal-premio-melhor-jogador-do-ano-304-polo-escudo-dourado-iamal-yamau-24-25-2024-2025-bd6abe1676dd8b774d17331765650608-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-barca-branca-branco-edicao-especial-lamine-yamal-premio-melhor-jogador-do-ano-304-polo-escudo-dourado-iamal-yamau-24-25-2024-2025-bd6abe1676dd8b774d17331765650608-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-barca-branca-branco-edicao-especial-lamine-yamal-premio-melhor-jogador-do-ano-304-polo-escudo-dourado-iamal-yamau-24-25-2024-2025-4-6f394bff42e1e1012a17331765650502-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-barcelona-barca-branca-branco-edicao-especial-lamine-yamal-premio-melhor-jogador-do-ano-304-polo-escudo-dourado-iamal-yamau-24-25-2024-2025-3-aa4ac906a9c185005117331765655157-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Barcelona Edição Especial Lamine Yamal 24/25 - Torcedor Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Barcelona Edição Especial Lamine Yamal 24/25 - Torcedor Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-united-2025-2026-masculina-vermelha-adidas-oficial-red-devils-snapdragon-2-8014d95e7c2180844a17531362069403-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-united-2025-2026-masculina-vermelha-adidas-oficial-red-devils-snapdragon-2-8014d95e7c2180844a17531362069403-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-united-2025-2026-masculina-vermelha-adidas-oficial-red-devils-snapdragon-3-f73c496acc0254ae8617531362066385-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-united-2025-2026-masculina-vermelha-adidas-oficial-red-devils-snapdragon-4-c744fccdadf30f6c7c17531362068744-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-united-2025-2026-masculina-vermelha-adidas-oficial-red-devils-snapdragon-7-aa8edb5e2b5245549817531362068001-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United 2025/26 I Adidas Torcedor Masculina - Vermelha</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United 2025/26 I Adidas Torcedor Masculina - Vermelha', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-united-2025-2026-masculina-branca-roxa-adidas-oficial-red-devils-snapdragon-6-a691124c867d014ad017531372824558-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-united-2025-2026-masculina-branca-roxa-adidas-oficial-red-devils-snapdragon-6-a691124c867d014ad017531372824558-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-united-2025-2026-masculina-branca-roxa-adidas-oficial-red-devils-snapdragon-5-9225d9fce6a697128a17531372827515-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-united-2025-2026-masculina-branca-roxa-adidas-oficial-red-devils-snapdragon-4-5161c2e8578acdf72d17531372829411-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-united-2025-2026-masculina-branca-roxa-adidas-oficial-red-devils-snapdragon-7-f98113a235ba7b5bdf17531372822072-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United 2025/26 II Adidas Torcedor Masculina - Branca e Lilás</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United 2025/26 II Adidas Torcedor Masculina - Branca e Lilás', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-iii-3-third-terceira-preta-preto-e-amarela-detalhe-fluorescente-escudo-diferente-snapdragon-patrocinio-gola-cruzada-25-26-2025-20-5-804a578d5b238e673f17501141828275-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-iii-3-third-terceira-preta-preto-e-amarela-detalhe-fluorescente-escudo-diferente-snapdragon-patrocinio-gola-cruzada-25-26-2025-20-5-804a578d5b238e673f17501141828275-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-iii-3-third-terceira-preta-preto-e-amarela-detalhe-fluorescente-escudo-diferente-snapdragon-patrocinio-gola-cruzada-25-26-2025-20-4-0013436a81ebba787417501141827678-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-iii-3-third-terceira-preta-preto-e-amarela-detalhe-fluorescente-escudo-diferente-snapdragon-patrocinio-gola-cruzada-25-26-2025-20-3-9bf2deb9388259294617501141833533-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-iii-3-third-terceira-preta-preto-e-amarela-detalhe-fluorescente-escudo-diferente-snapdragon-patrocinio-gola-cruzada-25-26-2025-2026-1-13fde2f7b037a7dcb817501141828126-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United III 25/26 Torcedor Adidas Masculina - Preta </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United III 25/26 Torcedor Adidas Masculina - Preta ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8586-80ec210e539e79293b17560669751842-1024-1024-9d38b30e6f462b39ef17634240588144-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8586-80ec210e539e79293b17560669751842-1024-1024-9d38b30e6f462b39ef17634240588144-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8587-dff5fa868fcabae0e117560669748600-1024-1024-a750160413028d621917634240603255-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United II 25/26 - Torcedor Adidas Feminina - Branca e roxa</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United II 25/26 - Torcedor Adidas Feminina - Branca e roxa', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8570-759208c0aba0924ad117560649690000-1024-1024-f43a68c08ee4a8352517634240550907-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8570-759208c0aba0924ad117560649690000-1024-1024-f43a68c08ee4a8352517634240550907-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8571-dbd18ba32e81d951c517560649686638-1024-1024-3565e16f028f7105c617634240575527-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United III 25/26 - Torcedor Adidas Feminina - Preta </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United III 25/26 - Torcedor Adidas Feminina - Preta ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-branca-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-redonda-branca-believe-reserva-visitante-1-410435d03fac5c85ad17447545604060-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-branca-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-redonda-branca-believe-reserva-visitante-1-410435d03fac5c85ad17447545604060-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-branca-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-redonda-branca-believe-reserva-visitante-6-e1f66f579e0902162717447545604398-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-branca-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-redonda-branca-believe-reserva-visitante-5-c6263a38f0446e6cc817447545607217-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-branca-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-redonda-branca-believe-reserva-visitante-2-c76c0b71854c51614917447545605084-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United II Retrô 10/11 Nike Masculina - Branca</h3>
+        <p class="preco">R$ 175,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United II Retrô 10/11 Nike Masculina - Branca', 175.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterUnited">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-vermelha-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-polo-branca-mufc-champions-league-1-d21e3771f1bf2925bb17447540626919-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-vermelha-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-polo-branca-mufc-champions-league-1-d21e3771f1bf2925bb17447540626919-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-vermelha-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-polo-branca-mufc-champions-league-5-350e07e017a90f8cef17447540626444-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-vermelha-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-polo-branca-mufc-champions-league-3-92cfdc7a899e07f83b17447540624575-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-united-vermelha-retro-vintage-antiga-2010-2011-10-11-aon-nike-rooney-masculina-torcedor-gola-polo-branca-mufc-champions-league-2-0a10fd0d40a3a4888f17447540626339-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester United I Retrô 10/11 Nike Masculina - Vermelha</h3>
+        <p class="preco">R$ 175,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester United I Retrô 10/11 Nike Masculina - Vermelha', 175.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterCity">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-city-2025-2026-masculina-azul-puma-oficial-citizens-etihad-airways-5-ec8ca4a5c88b8536c317532931458532-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-city-2025-2026-masculina-azul-puma-oficial-citizens-etihad-airways-5-ec8ca4a5c88b8536c317532931458532-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-city-2025-2026-masculina-azul-puma-oficial-citizens-etihad-airways-7-b177495d1895dd2bdb17532931459852-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-city-2025-2026-masculina-azul-puma-oficial-citizens-etihad-airways-1-5c9fec1549d3b780fb17532931462787-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-manchester-city-2025-2026-masculina-azul-puma-oficial-citizens-etihad-airways-4-bd15e7015e0c70502a17532931458953-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester City 2025/26 I Puma Torcedor Masculina - Azul</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester City 2025/26 I Puma Torcedor Masculina - Azul', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterCity">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9970-8233fc7a1d79149ea317563454111705-1024-1024-8f6261e177ba0c4f4a17634242369089-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9970-8233fc7a1d79149ea317563454111705-1024-1024-8f6261e177ba0c4f4a17634242369089-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-6-020d1cc51585547cf417532938953876-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-2-07fb69229393d4fa6317532938959280-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_9971-ef0c28fb34a732586317563454109933-1024-1024-68ebe0fb3b71acfa0517634242386016-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester City 2025/26 II Puma Torcedor Masculina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester City 2025/26 II Puma Torcedor Masculina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterCity">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-7-5088b8225d9f184a5917532938957409-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-7-5088b8225d9f184a5917532938957409-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-5-7cf98d406697156a0317532938959114-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-2-07fb69229393d4fa6317532938959280-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-manchester-city-2025-2026-masculina-preta-puma-oficial-citizens-etihad-airways-1-c8e6f2949dc2e3466d17532938954206-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester City II 25/26 - Torcedor Adidas Feminina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester City II 25/26 - Torcedor Adidas Feminina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterCity">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8868-cb3ff7970415eab14f17560983006264-1024-1024-9c60e2c782b186dbb217634241008379-1024-1024.png">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8868-cb3ff7970415eab14f17560983006264-1024-1024-9c60e2c782b186dbb217634241008379-1024-1024.png,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8869-3b88d4ca37d8de7aa617560983003981-1024-1024-8739c3d2bf27863c3e17634241029670-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester City III 25/26 - Torcedor Puma Masculina - Cinza e verde neon</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester City III 25/26 - Torcedor Puma Masculina - Cinza e verde neon', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="ManchesterCity">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-city-i-1-home-casa-titular-azul-etihad-marinho-puma-gola-azul-forte-escuro-24-25-2024-2025-masculino-masculina-646391168bd16f616d17216871680249-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-city-i-1-home-casa-titular-azul-etihad-marinho-puma-gola-azul-forte-escuro-24-25-2024-2025-masculino-masculina-646391168bd16f616d17216871680249-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-city-i-1-home-casa-titular-azul-etihad-marinho-puma-gola-azul-forte-escuro-24-25-2024-2025-masculino-masculina-4-3c6cace417eda5e09d17216871683201-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-manchester-city-i-1-home-casa-titular-azul-etihad-marinho-puma-gola-azul-forte-escuro-24-25-2024-2025-masculino-masculina-5-194cb7656348ef922b17216871680563-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Manchester City I 24/25 Torcedor Puma Masculina - Azul</h3>
+        <p class="preco">R$ 170,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Manchester City I 24/25 Torcedor Puma Masculina - Azul', 170.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-liverpool-2025-2026-masculina-vermelha-adidas-oficial-the-reds-4-5fa7f19a7c950a5a2c17532818536861-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-liverpool-2025-2026-masculina-vermelha-adidas-oficial-the-reds-4-5fa7f19a7c950a5a2c17532818536861-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-liverpool-2025-2026-masculina-vermelha-adidas-oficial-the-reds-6-064185785d5d0656f417532818539011-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-liverpool-2025-2026-masculina-vermelha-adidas-oficial-the-reds-5-0383ad6efc69eaf2d417532818538385-1024-1024.webphttps://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-liverpool-2025-2026-masculina-vermelha-adidas-oficial-the-reds-2-251ae192523d18be1f17532818541609-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool 2025/26 I Adidas Torcedor Masculina - Vermelha</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool 2025/26 I Adidas Torcedor Masculina - Vermelha', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-liverpool-away-2025-26-masculina-adidas-creme-branca-1-da019c1a7b711085bc17622959849890-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-liverpool-away-2025-26-masculina-adidas-creme-branca-1-da019c1a7b711085bc17622959849890-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-liverpool-away-2025-26-masculina-adidas-creme-branca-2-8aba81efb4a3943fc417622959849549-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-liverpool-away-2025-26-masculina-adidas-creme-branca-3-c2169805b5cd53371517622959849723-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-liverpool-away-2025-26-masculina-adidas-creme-branca-6-de070c24897e10534b17622959849232-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool II 2025/26 Adidas Torcedor Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool II 2025/26 Adidas Torcedor Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1336-87b2f6b05ff9ec571017575612932076-1024-1024-b096243969ec70fc0917634243701555-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1336-87b2f6b05ff9ec571017575612932076-1024-1024-b096243969ec70fc0917634243701555-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1337-68d7e2d49c779ca7cf17575612935120-1024-1024-879e14c84bef24658a17634243721200-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool III 25/26 - Torcedor Adidas Masculina - Verde</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool III 25/26 - Torcedor Adidas Masculina - Verde', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1338-028e4b7ee2897d6ec117575612405688-1024-1024-479407dfcae9b3abf317634243700097-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1338-028e4b7ee2897d6ec117575612405688-1024-1024-479407dfcae9b3abf317634243700097-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_1339-45adf84e2131cdcdbc17575612399769-1024-1024-827f826d10866e9b9417634243717142-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool III 25/26 - Torcedor Adidas Feminina - Verde</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool III 25/26 - Torcedor Adidas Feminina - Verde', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8832-83d73db4f322bae58717560967173412-1024-1024-b44618438547eb3d8617634240937550-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8832-83d73db4f322bae58717560967173412-1024-1024-b44618438547eb3d8617634240937550-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8833-49c880e0ce112cf01517560967178017-1024-1024-76fd2b6414fe16175717634240957469-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool I 25/26 - Torcedor Adidas Feminina - Vermelha</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool I 25/26 - Torcedor Adidas Feminina - Vermelha', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="liverpool">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8828-eb0068241494fe98f217560918503005-1024-1024-292e71bdf3c91b867417634240940469-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8828-eb0068241494fe98f217560918503005-1024-1024-292e71bdf3c91b867417634240940469-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8829-01708aea3034fd677217560918497872-1024-1024-b220462384875485c317634240956766-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Liverpool II 25/26 - Torcedor Adidas Feminina - Bege com detalhes em vermelho e preto</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Liverpool II 25/26 - Torcedor Adidas Feminina - Bege com detalhes em vermelho e preto', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="chelsea">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-titular-home-casa-1-i-azul-do-chelsea-nike-gola-branca-25-26-2025-2026-torcedor-masculina-comprar-3-e49d49ebbfdfa1f43a17513327590102-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-titular-home-casa-1-i-azul-do-chelsea-nike-gola-branca-25-26-2025-2026-torcedor-masculina-comprar-3-e49d49ebbfdfa1f43a17513327590102-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-titular-home-casa-1-i-azul-do-chelsea-nike-gola-branca-25-26-2025-2026-torcedor-masculina-comprar-5-904f9700cab1cd6ff817513327584874-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-titular-home-casa-1-i-azul-do-chelsea-nike-gola-branca-25-26-2025-2026-torcedor-masculina-comprar-8-3ee04f9caeba0c1c2017513327588681-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-titular-home-casa-1-i-azul-do-chelsea-nike-gola-branca-25-26-2025-2026-torcedor-masculina-comprar-6-a88f3972a9e3aed32317513327588617-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Chelsea I 25/26 Torcedor Nike Masculina - Azul</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Chelsea I 25/26 Torcedor Nike Masculina - Azul', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="chelsea">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-ii-2-away-fora-visitante-branco-branca-nike-gola-azul-escudo-laranja-fogo-24-25-2024-2025-refletivo-masculina-masculino-fan-torcedor-39245c46515e55eb6d17343056741362-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-ii-2-away-fora-visitante-branco-branca-nike-gola-azul-escudo-laranja-fogo-24-25-2024-2025-refletivo-masculina-masculino-fan-torcedor-39245c46515e55eb6d17343056741362-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-ii-2-away-fora-visitante-branco-branca-nike-gola-azul-escudo-laranja-fogo-24-25-2024-2025-refletivo-masculina-masculino-fan-torcedor-2-20fad8a2cf8125fd6217343056740218-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-ii-2-away-fora-visitante-branco-branca-nike-gola-azul-escudo-laranja-fogo-24-25-2024-2025-refletivo-masculina-masculino-fan-torcedor-3-0c48442fc0d462578317343056739852-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-ii-2-away-fora-visitante-branco-branca-nike-gola-azul-escudo-laranja-fogo-24-25-2024-2025-refletivo-masculina-masculino-fan-torcedor-4-d2065cb9621f90499017343056739850-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Chelsea II 24/25 Torcedor Nike Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Chelsea II 24/25 Torcedor Nike Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="chelsea">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-preta-preto-black-3-third-terceira-tres-black-nike-rosa-escudo-rosa-manga-simbolo-invertido-2024-2025-24-25-torcedor-d73486e1bddab13cba17296382506246-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-preta-preto-black-3-third-terceira-tres-black-nike-rosa-escudo-rosa-manga-simbolo-invertido-2024-2025-24-25-torcedor-d73486e1bddab13cba17296382506246-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-preta-preto-black-3-third-terceira-tres-black-nike-rosa-escudo-rosa-manga-simbolo-invertido-2024-2025-24-25-torcedor-4-2d40aab371135cebca17296382502142-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-preta-preto-black-3-third-terceira-tres-black-nike-rosa-escudo-rosa-manga-simbolo-invertido-2024-2025-24-25-torcedor-3-8b0bda174a444d1b1d17296382502101-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-chelsea-preta-preto-black-3-third-terceira-tres-black-nike-rosa-escudo-rosa-manga-simbolo-invertido-2024-2025-24-25-torcedor-2-f32543d4d6d24c3cd317296382502388-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Chelsea III 24/25 Torcedor Nike Masculina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Chelsea III 24/25 Torcedor Nike Masculina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="chelsea">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8803-84a6d8371b5a9394e017560908022560-1024-1024-9b8cbe5a0b5ba8548e17634240884189-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8803-84a6d8371b5a9394e017560908022560-1024-1024-9b8cbe5a0b5ba8548e17634240884189-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8802-733af47455ad3d6ae417560908026356-1024-1024-de29bdf16ea49d28a117634240899732-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Chelsea III 25/26 - Torcedor Nike Feminina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Chelsea III 25/26 - Torcedor Nike Feminina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="chelsea">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8793-da75b4281fb62cf97e17560905475846-1024-1024-36e18a65cfac2b7e3117634240871104-1024-1024.png">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8793-da75b4281fb62cf97e17560905475846-1024-1024-36e18a65cfac2b7e3117634240871104-1024-1024.png,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8794-eb8dc32575f5815c2f17560905474611-1024-1024-97522e3213c49faec517634240887206-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Chelsea III 25/26 - Torcedor Nike Masculina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Chelsea III 25/26 - Torcedor Nike Masculina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="arsenal ">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-fc-i-1-home-casa-titular-vermelho-vermelha-adidas-emirates-fly-better-letra-a-gola-branca-25-26-2025-2026-victoria-concordia-crescit-masculina-2-baa6ba3058e2bab54017495087093214-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-fc-i-1-home-casa-titular-vermelho-vermelha-adidas-emirates-fly-better-letra-a-gola-branca-25-26-2025-2026-victoria-concordia-crescit-masculina-2-baa6ba3058e2bab54017495087093214-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-fc-i-1-home-casa-titular-vermelho-vermelha-adidas-emirates-fly-better-letra-a-gola-branca-25-26-2025-2026-victoria-concordia-crescit-masculina-6-8b4f94f87493c5e36c17495087093140-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-fc-i-1-home-casa-titular-vermelho-vermelha-adidas-emirates-fly-better-letra-a-gola-branca-25-26-2025-2026-victoria-concordia-crescit-masculina-5-555ad71fb5c3e1c47a17495087090964-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-fc-i-1-home-casa-titular-vermelho-vermelha-adidas-emirates-fly-better-letra-a-gola-branca-25-26-2025-2026-victoria-concordia-crescit-masculina-3-e55d3465a4dfde2e4017495087093559-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Arsenal I 25/26 Torcedor Adidas Masculina - Vermelha </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Arsenal I 25/26 Torcedor Adidas Masculina - Vermelha ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="arsenal ">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-arsenal-2025-2026-masculina-azul-escuro-adidas-oficial-gunners-emirates-6-ea9c47fa8cb287a51e17526144794653-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-arsenal-2025-2026-masculina-azul-escuro-adidas-oficial-gunners-emirates-6-ea9c47fa8cb287a51e17526144794653-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-arsenal-2025-2026-masculina-azul-escuro-adidas-oficial-gunners-emirates-2-f1e6a793ce8f9cabf617526144791862-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-arsenal-2025-2026-masculina-azul-escuro-adidas-oficial-gunners-emirates-3-2d47ea07116e8f644f17526144790083-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-arsenal-2025-2026-masculina-azul-escuro-adidas-oficial-gunners-emirates-5-e25d00c99ae1495de717526144789699-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Arsenal 2025/26 II Adidas Torcedor Masculina - Azul </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Arsenal 2025/26 II Adidas Torcedor Masculina - Azul ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="arsenal ">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8607-8e8f9c0ba1e62f401c17560836890449-1024-1024-7805cd84522513604617634240605847-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8607-8e8f9c0ba1e62f401c17560836890449-1024-1024-7805cd84522513604617634240605847-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8608-7fe3bbfdcc277efcc717560836894740-1024-1024-198eb94df1a36edade17634240623909-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Arsenal II 25/26 - Torcedor Adidas Feminina - Azul </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Arsenal II 25/26 - Torcedor Adidas Feminina - Azul ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="arsenal ">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-all-white-toda-branca-edicao-especial-emirates-fly-better-adidas-detalhes-preto-25-26-2025-2026-comprar-5-10e3edaa69b57042b017400958389708-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-all-white-toda-branca-edicao-especial-emirates-fly-better-adidas-detalhes-preto-25-26-2025-2026-comprar-5-10e3edaa69b57042b017400958389708-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-all-white-toda-branca-edicao-especial-emirates-fly-better-adidas-detalhes-preto-25-26-2025-2026-comprar-2-07f9307e3c55920d6917400958394352-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-all-white-toda-branca-edicao-especial-emirates-fly-better-adidas-detalhes-preto-25-26-2025-2026-comprar-3-24cd093688e28400ed17400958393775-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-arsenal-all-white-toda-branca-edicao-especial-emirates-fly-better-adidas-detalhes-preto-25-26-2025-2026-comprar-1-79048cc936ee429f2217400958396774-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Arsenal "No More Red" 25/26 Adidas Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Arsenal "No More Red" 25/26 Adidas Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="arsenal ">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8619-420159a22871f7031b17560839655992-1024-1024-90fa5e7e5dbe1171fb17634240682985-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8619-420159a22871f7031b17560839655992-1024-1024-90fa5e7e5dbe1171fb17634240682985-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_8620-88a9b72840cd8d09ac17560839654465-1024-1024-64b42c5de1064b7c3517634240698929-1024-1024.png">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Arsenal III 25/26 - Torcedor Adidas Feminina - Branca com detalhes em vinho</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Arsenal III 25/26 - Torcedor Adidas Feminina - Branca com detalhes em vinho', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-munchen-vermelha-vermelho-retro-antiga-vintage-2013-2014-13-14-campeao-champions-league-t-patrocinio-adidas-i-1-home-casa-titular-1-7a05fc0453ffa965a617434623974426-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-munchen-vermelha-vermelho-retro-antiga-vintage-2013-2014-13-14-campeao-champions-league-t-patrocinio-adidas-i-1-home-casa-titular-1-7a05fc0453ffa965a617434623974426-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-munchen-vermelha-vermelho-retro-antiga-vintage-2013-2014-13-14-campeao-champions-league-t-patrocinio-adidas-i-1-home-casa-titular-6-e5e0c0de19580c3a7c17434623979542-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-munchen-vermelha-vermelho-retro-antiga-vintage-2013-2014-13-14-campeao-champions-league-t-patrocinio-adidas-i-1-home-casa-titular-3-c85f160e8accd877de17434623978127-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-munchen-vermelha-vermelho-retro-antiga-vintage-2013-2014-13-14-campeao-champions-league-t-patrocinio-adidas-i-1-home-casa-titular-edeca1e49ffb6147a017434623978879-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique I Retrô 13/14 Adidas Masculina - Vermelha</h3>
+        <p class="preco">R$ 180,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique I Retrô 13/14 Adidas Masculina - Vermelha', 180.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-6-7be65fe6023a75b16717526125459776-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-6-7be65fe6023a75b16717526125459776-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-5-d52e284189b372960a17526125460878-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-4-60323927839fbd31ef17526125461202-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-3-47db475cd84d45e2e017526125457022-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-titular-bayern-de-munique-2025-2026-masculina-vermelha-adidas-oficial-fc-bayern-7-60462fda5cf87c647917526125460505-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique 2025/26 I Adidas Torcedor Masculina - Vermelha</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique 2025/26 I Adidas Torcedor Masculina - Vermelha', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-bayern-de-munique-2025-2026-masculina-branca-adidas-oficial-fc-bayern-4-a64df9181ac7be01ad17526112666607-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-bayern-de-munique-2025-2026-masculina-branca-adidas-oficial-fc-bayern-4-a64df9181ac7be01ad17526112666607-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-bayern-de-munique-2025-2026-masculina-branca-adidas-oficial-fc-bayern-5-60956e6305c665793817526112663196-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-bayern-de-munique-2025-2026-masculina-branca-adidas-oficial-fc-bayern-6-b8eeae464001fcd88717526112665591-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-reserva-bayern-de-munique-2025-2026-masculina-branca-adidas-oficial-fc-bayern-3-2abad7854f9588ddcb17526112660895-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique 2025/26 II Adidas Torcedor Masculina - Branca</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique 2025/26 II Adidas Torcedor Masculina - Branca', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7836-b4b1c753b655485d8117559224671913-1024-1024-d33f614520e54c8c2017634239764433-1024-1024.png">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7836-b4b1c753b655485d8117559224671913-1024-1024-d33f614520e54c8c2017634239764433-1024-1024.png,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7837-58d5dd815b4c4bcd3117559224676417-1024-1024-efebcc95852dea71de17634239780594-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique III 25/26 - Torcedor Adidas Masculina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique III 25/26 - Torcedor Adidas Masculina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7855-ba57997f3a05a40d8d17559230533605-1024-1024-f501920facf9942a8817634239785156-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7855-ba57997f3a05a40d8d17559230533605-1024-1024-f501920facf9942a8817634239785156-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/img_7856-b9446fec7fc0c1cf9917559230533237-1024-1024-04746dddb76a8b7e0d17634239800319-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique III 25/26 - Torcedor Adidas Feminina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique III 25/26 - Torcedor Adidas Feminina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-vermelho-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-grena-25-26-2025-2026-torcedor-masculin-3-bda5cf3557c4b488db17404917147034-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-vermelho-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-grena-25-26-2025-2026-torcedor-masculin-3-bda5cf3557c4b488db17404917147034-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-vermelho-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-grena-25-26-2025-2026-torcedor-masculin-5-b7a81fc9ae29fb771c17404917147666-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-vermelho-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-grena-25-26-2025-2026-torcedor-masculina-1-f7424a81daf2842b5717404917147461-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-vermelho-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-grena-25-26-2025-2026-torcedor-masculin-4-01d1404fa55cd76ea017404917144370-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Grená </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Grená ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-preta-preto-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-0152babf8b93c2e5ec17422515116790-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-preta-preto-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-0152babf8b93c2e5ec17422515116790-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-preta-preto-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-3-ecf50fce010740888517422515112680-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-preta-preto-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-6-a2414ba5a1f8ae581117422515113191-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-preta-preto-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-08a790a630aa52e81a17422515116460-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Preta</h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Preta', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
+    <div class="moldura">
+        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
+        
+        <img src="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-branca-branco-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-1-9d04b75cf87bb51b1517422518401496-1024-1024.webp">
+        
+        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <input type="hidden" class="fotos-lista" value="https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-branca-branco-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-1-1-9d04b75cf87bb51b1517422518401496-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-branca-branco-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-3-7fc8c0f641ba49f5a917422518397128-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-branca-branco-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-128b10ad246014435117422518399608-1024-1024.webp,https://acdn-us.mitiendanube.com/stores/002/042/833/products/camisa-camiseta-uniforme-do-bayern-de-munique-branca-branco-edicao-especial-escudo-diferente-novo-adidas-detalhes-dourado-t-originals-125-anos-conceito-concept-25-26-2025-2026-5-5b11cb76263f0a386917422518398546-1024-1024.webp">
+        
+        <input type="hidden" class="foto-atual" value="0">
+    </div>
+
+    <div class="info">
+        <h3>Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Branca </h3>
+        <p class="preco">R$ 160,00</p>
+        <p class="preco-pix-card">10% OFF NO PIX</p>
+        
+        <button class="btn-comprar" onclick="abrirModal('Camisa Bayern de Munique 125 Anos 25/26 Torcedor Adidas Masculina - Branca ', 160.00)">ADICIONAR</button>
+    </div>
+</div>
+<div class="card" data-time="BayernMunique">
     <div class="moldura">
         <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
         
@@ -4232,280 +5489,8 @@
         <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
     </div>
 </div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
 
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
 
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
-<div class="card" data-time="brasil">
-    <div class="moldura">
-        <button class="btn-foto-nav btn-foto-prev" onclick="mudarFoto(this, -1)"><i class="fas fa-chevron-left"></i></button>
-        
-        <img src="LINK_DA_FOTO_1">
-        
-        <button class="btn-foto-nav btn-foto-next" onclick="mudarFoto(this, 1)"><i class="fas fa-chevron-right"></i></button>
-        
-        <input type="hidden" class="fotos-lista" value="LINK_DA_FOTO_1,LINK_DA_FOTO_2,LINK_DA_FOTO_3,LINK_DA_FOTO_4">
-        
-        <input type="hidden" class="foto-atual" value="0">
-    </div>
-
-    <div class="info">
-        <h3>NOME DA CAMISA AQUI</h3>
-        <p class="preco">R$ 198,00</p>
-        <p class="preco-pix-card">10% OFF NO PIX</p>
-        
-        <button class="btn-comprar" onclick="abrirModal('NOME DA CAMISA AQUI', 198.00)">ADICIONAR</button>
-    </div>
-</div>
 
     </section>
 
